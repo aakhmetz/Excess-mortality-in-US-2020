@@ -1,0 +1,505 @@
+/*! BEGIN VizZoneDesktop */
+
+(function() {
+  'dont use strict';
+  var $asm = {};
+  global.tab = global.tab || {};
+  ss.initAssembly($asm, 'vqlvizzonedesktop');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.VizZoneDesktop.OverlayCanvasTemplate
+  var $tab_$OverlayCanvasTemplate = ss.mkType($asm, 'tab.$OverlayCanvasTemplate', function() {
+    this.$canvasElt = null;
+    spiff.Template.call(this, $($tab_$OverlayCanvasTemplate.$overlayTemplate));
+    this.$canvasElt = this.domRoot;
+    this.$canvasElt.css('display', 'block');
+  });
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.VizZoneDesktop.OverlayData
+  var $tab_$OverlayData = ss.mkType($asm, 'tab.$OverlayData', function(overlayImage) {
+    this.$overlayCanvas = null;
+    this.$overlayImage = null;
+    this.$overlayContext = null;
+    this.$requestID = 0;
+    this.$position = null;
+    this.$dirtyRect = null;
+    this.$1$LastHandledRequestIDField = 0;
+    this.$overlayImage = overlayImage;
+    var overlayTarget = new $tab_$OverlayCanvasTemplate();
+    this.$overlayCanvas = overlayTarget.$canvasElt.get(0);
+    this.$overlayCanvas.style.visibility = 'hidden';
+    this.$overlayContext = this.$overlayCanvas.getContext('2d');
+    this.$position = { x: -1, y: -1 };
+    this.$requestID = 0;
+    this.$dirtyRect = { x: 0, y: 0, w: 0, h: 0 };
+    this.set_$lastHandledRequestID(-1);
+  }, {
+    get_$lastHandledRequestID: function OverlayData$get_LastHandledRequestID() {
+      return this.$1$LastHandledRequestIDField;
+    },
+    set_$lastHandledRequestID: function OverlayData$set_LastHandledRequestID(value) {
+      this.$1$LastHandledRequestIDField = value;
+    },
+    $draw: function OverlayData$Draw() {
+      this.$overlayContext.clearRect(this.$dirtyRect.x, this.$dirtyRect.y, this.$dirtyRect.w, this.$dirtyRect.h);
+      this.$overlayContext.drawImage(this.$overlayImage, this.$position.x, this.$position.y);
+      this.$dirtyRect = { x: this.$position.x, y: this.$position.y, w: this.$overlayImage.width, h: this.$overlayImage.height };
+      this.set_$lastHandledRequestID(this.$requestID);
+      this.$overlayCanvas.style.visibility = 'visible';
+    },
+    $clear: function OverlayData$Clear(requestID) {
+      this.$overlayCanvas.style.visibility = 'hidden';
+      this.set_$lastHandledRequestID(requestID);
+    },
+    $setStateForNextOverlay: function OverlayData$SetStateForNextOverlay(position, requestID) {
+      this.$position = position;
+      this.$requestID = requestID;
+    }
+  });
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.VizZoneDesktop.VisualInteropObjectInstance.DesktopVizInstance
+  var $tab_$VisualInteropObjectInstance$DesktopVizInstance = ss.mkType($asm, 'tab.$VisualInteropObjectInstance$DesktopVizInstance', function(getContentProvider, cornersRenderer, tooltip) {
+    this.$getContentProvider$1 = null;
+    this.$1$CornersRendererField = null;
+    this.$1$TooltipField = null;
+    this.$getContentProvider$1 = getContentProvider;
+    this.set_$cornersRenderer(cornersRenderer);
+    this.set_$tooltip(tooltip);
+  }, {
+    get_$cornersRenderer: function DesktopVizInstance$get_CornersRenderer() {
+      return this.$1$CornersRendererField;
+    },
+    set_$cornersRenderer: function DesktopVizInstance$set_CornersRenderer(value) {
+      this.$1$CornersRendererField = value;
+    },
+    get_$tooltip: function DesktopVizInstance$get_Tooltip() {
+      return this.$1$TooltipField;
+    },
+    set_$tooltip: function DesktopVizInstance$set_Tooltip(value) {
+      this.$1$TooltipField = value;
+    },
+    $getContentProvider: function DesktopVizInstance$GetContentProvider(region) {
+      return this.$getContentProvider$1(region);
+    }
+  });
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.VizZoneDesktop.DesktopModeHandler
+  var $tab_DesktopModeHandler = global.tab.DesktopModeHandler = ss.mkType($asm, 'tab.DesktopModeHandler', function(instance, vizIdentifier, getContentProviderFunc, cornersRenderer, tooltip) {
+    this.$vizIdentifier = null;
+    this.$visualInteropObjectInstance = null;
+    this.$vizIdentifier = vizIdentifier;
+    this.$visualInteropObjectInstance = instance;
+    if (ss.isValue(this.$visualInteropObjectInstance)) {
+      this.$visualInteropObjectInstance.registerViz(vizIdentifier, getContentProviderFunc, cornersRenderer, tooltip);
+    }
+  }, {
+    dispose: function DesktopModeHandler$Dispose() {
+      if (ss.isValue(this.$visualInteropObjectInstance)) {
+        this.$visualInteropObjectInstance.unregisterViz(this.$vizIdentifier);
+      }
+    },
+    get_vizIdentifier: function DesktopModeHandler$get_VizIdentifier() {
+      return this.$vizIdentifier;
+    },
+    setScrollPosition: function DesktopModeHandler$SetScrollPosition(scrollPosition) {
+      this.$visualInteropObjectInstance.onScroll(this.$vizIdentifier, { xCoord: scrollPosition.x, yCoord: scrollPosition.y });
+      tab.RenderingPerfUtils.dispatchRenderingPerfEvent(this.$vizIdentifier, 'viz', tab.RenderingPerfUtils.startSceneEventType);
+    },
+    onHover: function DesktopModeHandler$OnHover(hoverPosition, region) {
+      this.$visualInteropObjectInstance.onHover(this.$vizIdentifier, { xCoord: hoverPosition.x, yCoord: hoverPosition.y }, region);
+      if ($tab_DesktopModeHandler.$pointIsValid(hoverPosition)) {
+        tab.RenderingPerfUtils.dispatchRenderingPerfEvent(this.$vizIdentifier, 'viz', tab.RenderingPerfUtils.startHoverEventType);
+      }
+    },
+    anchorZoom: function DesktopModeHandler$AnchorZoom(anchorPoint, scaleFactor) {
+      this.$visualInteropObjectInstance.onScale(this.$vizIdentifier, { xCoord: anchorPoint.x, yCoord: anchorPoint.y }, scaleFactor);
+    },
+    onPan: function DesktopModeHandler$OnPan(startPoint, delta) {
+      this.$visualInteropObjectInstance.onPan(this.$vizIdentifier, { xCoord: startPoint.x, yCoord: startPoint.y }, { xCoord: delta.x, yCoord: delta.y });
+    }
+  }, {
+    $pointIsValid: function DesktopModeHandler$PointIsValid(point) {
+      return point.x >= 0 && point.y >= 0;
+    }
+  });
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.VizZoneDesktop.DesktopRenderModeRegionProvider
+  var $tab_DesktopRenderModeRegionProvider = global.tab.DesktopRenderModeRegionProvider = ss.mkType($asm, 'tab.DesktopRenderModeRegionProvider', function(region, vizIdentifier, domnode) {
+    this.$domNode = null;
+    this.$containers = null;
+    this.$geometry = { x: 0, y: 0, w: 0, h: 0, r: '' };
+    this.$completeDocSize = { w: 0, h: 0 };
+    this.$actualSize = { w: 0, h: 0 };
+    this.$vizImageRenderer = null;
+    this.$1$LoadCompleteField = null;
+    this.$domNode = domnode;
+    this.$containers = $('.tvimagesContainer', this.$domNode);
+    this.$vizImageRenderer = new $tab_VizImageRenderer(region, vizIdentifier, this.$containers, $(this.$domNode));
+  }, {
+    add_loadComplete: function DesktopRenderModeRegionProvider$add_LoadComplete(value) {
+      this.$1$LoadCompleteField = ss.delegateCombine(this.$1$LoadCompleteField, value);
+    },
+    remove_loadComplete: function DesktopRenderModeRegionProvider$remove_LoadComplete(value) {
+      this.$1$LoadCompleteField = ss.delegateRemove(this.$1$LoadCompleteField, value);
+    },
+    get_hasContent: function DesktopRenderModeRegionProvider$get_HasContent() {
+      return true;
+    },
+    get_canScrollX: function DesktopRenderModeRegionProvider$get_CanScrollX() {
+      return true;
+    },
+    get_canScrollY: function DesktopRenderModeRegionProvider$get_CanScrollY() {
+      return true;
+    },
+    get_docSize: function DesktopRenderModeRegionProvider$get_DocSize() {
+      return this.$completeDocSize;
+    },
+    get_actualViewSize: function DesktopRenderModeRegionProvider$get_ActualViewSize() {
+      if (this.$actualSize.h === 0 && this.$actualSize.w === 0) {
+        this.$actualSize = { w: this.$domNode.clientWidth, h: this.$domNode.clientHeight };
+      }
+      return this.$actualSize;
+    },
+    set_actualViewSize: function DesktopRenderModeRegionProvider$set_ActualViewSize(value) {
+      this.$actualSize = value;
+    },
+    get_effectiveViewSize: function DesktopRenderModeRegionProvider$get_EffectiveViewSize() {
+      return this.get_actualViewSize();
+    },
+    get_scrollPos: function DesktopRenderModeRegionProvider$get_ScrollPos() {
+      return { x: 0, y: 0 };
+    },
+    set_scrollPos: function DesktopRenderModeRegionProvider$set_ScrollPos(value) {
+    },
+    destroy: function DesktopRenderModeRegionProvider$Destroy() {
+    },
+    refreshImages: function DesktopRenderModeRegionProvider$RefreshImages(tileCacheUrl) {
+    },
+    loadImages: function DesktopRenderModeRegionProvider$LoadImages() {
+      this.$vizImageRenderer.loadImages();
+    },
+    reset: function DesktopRenderModeRegionProvider$Reset(newGeometry, newTileSize) {
+      if (ss.isNullOrUndefined(newGeometry)) {
+        return;
+      }
+      var newSize = { w: newGeometry.w, h: newGeometry.h };
+      var docSizeChanged = ss.isValue(this.$completeDocSize) && !tab.SizeUtil.equals(newSize, this.$completeDocSize);
+      if (docSizeChanged) {
+        this.$completeDocSize = newSize;
+        this.set_actualViewSize(newSize);
+        this.$containers.width(this.get_actualViewSize().w);
+        this.$containers.height(this.get_actualViewSize().h);
+        this.$vizImageRenderer.resize(this.get_actualViewSize());
+        this.loadImages();
+      }
+    },
+    clearOverlay: function DesktopRenderModeRegionProvider$ClearOverlay(returnedRequestId) {
+      this.$vizImageRenderer.clearOverlay(returnedRequestId);
+    },
+    loadOverlay: function DesktopRenderModeRegionProvider$LoadOverlay(overlayPosition, returnedRequestId) {
+      this.$vizImageRenderer.loadOverlay(overlayPosition, returnedRequestId);
+    },
+    buildOnHoverParameters: function DesktopRenderModeRegionProvider$BuildOnHoverParameters(id, hoverPosition, region) {
+      return this.$vizImageRenderer.buildOnHoverParameters(id, hoverPosition, region);
+    },
+    setXPos: function DesktopRenderModeRegionProvider$SetXPos(xPos) {
+    },
+    setYPos: function DesktopRenderModeRegionProvider$SetYPos(yPos) {
+    }
+  });
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.VisualInteropObject.HitTestResultParameters
+  var $tab_HitTestResultParameters = global.tab.HitTestResultParameters = ss.mkType($asm, 'tab.HitTestResultParameters', function(id, visualPart, tupleId) {
+    this.id = null;
+    this.visualPart = null;
+    this.tupleId = 0;
+    this.id = id;
+    this.visualPart = visualPart;
+    this.tupleId = tupleId;
+  });
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.VizZoneDesktop.IDesktopModeHandler
+  var $tab_IDesktopModeHandler = global.tab.IDesktopModeHandler = ss.mkType($asm, 'tab.IDesktopModeHandler');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.VizZoneDesktop.IVisualInteropObjectInstance
+  var $tab_IVisualInteropObjectInstance = global.tab.IVisualInteropObjectInstance = ss.mkType($asm, 'tab.IVisualInteropObjectInstance');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.VisualInteropObject.OnHoverParameters
+  var $tab_OnHoverParameters = global.tab.OnHoverParameters = ss.mkType($asm, 'tab.OnHoverParameters', function(id, region, hoverPosition, requestId, lastHandledRequestId) {
+    this.id = null;
+    this.region = null;
+    this.hoverPosition = null;
+    this.requestId = 0;
+    this.lastHandledRequestId = 0;
+    this.id = id;
+    this.region = region;
+    this.hoverPosition = hoverPosition;
+    this.requestId = requestId;
+    this.lastHandledRequestId = lastHandledRequestId;
+  });
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.VizZoneDesktop.VisualInteropObjectFactory
+  var $tab_VisualInteropObjectFactory = global.tab.VisualInteropObjectFactory = ss.mkType($asm, 'tab.VisualInteropObjectFactory', null, null, {
+    get_instance: function VisualInteropObjectFactory$get_Instance() {
+      if (ss.isNullOrUndefined($tab_VisualInteropObjectFactory.$visualInteropObject)) {
+        $tab_VisualInteropObjectFactory.$visualInteropObject = $tab_VisualInteropObjectFactory.$createVisualInteropObjectInstance();
+      }
+      return $tab_VisualInteropObjectFactory.$visualInteropObject;
+    },
+    $createVisualInteropObjectInstance: function VisualInteropObjectFactory$CreateVisualInteropObjectInstance() {
+      var visualInteropObjectInstance;
+      var interopObject = window.window['VisualInteropObject'];
+      if (ss.isValue(interopObject)) {
+        visualInteropObjectInstance = new $tab_VisualInteropObjectInstance(interopObject);
+      }
+      else {
+        visualInteropObjectInstance = null;
+      }
+      return visualInteropObjectInstance;
+    }
+  });
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.VizZoneDesktop.VisualInteropObjectInstance
+  var $tab_VisualInteropObjectInstance = global.tab.VisualInteropObjectInstance = ss.mkType($asm, 'tab.VisualInteropObjectInstance', function(interopObject) {
+    this.$interopObject = null;
+    this.$registeredVizzes = null;
+    this.$interopObject = interopObject;
+    this.$interopObject.registerNewFrameHandler(ss.mkdel(this, this.handleNewFrame));
+    this.$interopObject.registerNewOverlayHandler(ss.mkdel(this, this.handleNewOverlay));
+    this.$interopObject.registerClearOverlayHandler(ss.mkdel(this, this.handleClearOverlay));
+    this.$interopObject.registerNewUbertipHandler(ss.mkdel(this, this.handleNewUbertip));
+    this.$interopObject.registerHitTestResultHandler(ss.mkdel(this, this.handleHitTestResult));
+    this.$registeredVizzes = {};
+  }, {
+    registerViz: function VisualInteropObjectInstance$RegisterViz(vizIdentifier, getContentProviderFunc, cornersRenderer, tooltip) {
+      this.$registeredVizzes[vizIdentifier] = new $tab_$VisualInteropObjectInstance$DesktopVizInstance(getContentProviderFunc, cornersRenderer, tooltip);
+    },
+    unregisterViz: function VisualInteropObjectInstance$UnregisterViz(vizIdentifier) {
+      delete this.$registeredVizzes[vizIdentifier];
+    },
+    handleNewFrame: function VisualInteropObjectInstance$HandleNewFrame(viz, region) {
+      var vizImageRegion = region;
+      var contentProvider = this.$fetchContentProvider(viz, vizImageRegion);
+      if (ss.isNullOrUndefined(contentProvider)) {
+        return;
+      }
+      if (this.$regionIsCorner(vizImageRegion)) {
+        var cornersRenderer = this.$fetchCornersRenderer(viz);
+        if (ss.isValue(cornersRenderer)) {
+          cornersRenderer.refreshDesktopSingleCorner(viz, vizImageRegion);
+        }
+      }
+      else {
+        contentProvider.loadImages();
+      }
+    },
+    $regionIsCorner: function VisualInteropObjectInstance$RegionIsCorner(region) {
+      return region === 'uleft' || region === 'uright' || region === 'lleft' || region === 'lright';
+    },
+    handleNewOverlay: function VisualInteropObjectInstance$HandleNewOverlay(viz, hoverPosition, requestId) {
+      var contentProvider = this.$fetchContentProvider(viz, 'viz');
+      if (ss.isNullOrUndefined(contentProvider)) {
+        return;
+      }
+      contentProvider.loadOverlay({ x: hoverPosition.xCoord, y: hoverPosition.yCoord }, requestId);
+    },
+    handleClearOverlay: function VisualInteropObjectInstance$HandleClearOverlay(viz, requestId) {
+      var contentProvider = this.$fetchContentProvider(viz, 'viz');
+      if (ss.isNullOrUndefined(contentProvider)) {
+        return;
+      }
+      contentProvider.clearOverlay(requestId);
+    },
+    handleNewUbertip: function VisualInteropObjectInstance$HandleNewUbertip(viz, presModel) {
+      if (ss.isNullOrEmptyString(presModel)) {
+        return;
+      }
+      var tooltip = this.$fetchTooltip(viz);
+      if (ss.isNullOrUndefined(tooltip)) {
+        return;
+      }
+      var ubertip = JSON.parse(presModel);
+      tooltip.handleNewDesktopUbertip(ubertip);
+    },
+    handleHitTestResult: function VisualInteropObjectInstance$HandleHitTestResult(hitTestResultParameters) {
+      var tooltip = this.$fetchTooltip(hitTestResultParameters.id);
+      if (ss.isNullOrUndefined(tooltip)) {
+        return;
+      }
+      tooltip.updateTooltipFromDesktopHitTestResult(hitTestResultParameters.tupleId >>> 0, hitTestResultParameters.visualPart, this.$getVizImageRegion(hitTestResultParameters.visualPart));
+    },
+    onScroll: function VisualInteropObjectInstance$OnScroll(id, scrollPosition) {
+      this.$interopObject.onScroll(id, scrollPosition);
+    },
+    onHover: function VisualInteropObjectInstance$OnHover(id, hoverPosition, region) {
+      var contentProvider = this.$fetchContentProvider(id, region);
+      if (ss.isNullOrUndefined(contentProvider)) {
+        return;
+      }
+      this.$interopObject.onHover(contentProvider.buildOnHoverParameters(id, hoverPosition, region));
+    },
+    onScale: function VisualInteropObjectInstance$OnScale(id, anchorPoint, scaleFactor) {
+      this.$interopObject.onScale(id, anchorPoint, scaleFactor);
+    },
+    onPan: function VisualInteropObjectInstance$OnPan(id, startPoint, delta) {
+      this.$interopObject.onPan(id, startPoint, delta);
+    },
+    $fetchContentProvider: function VisualInteropObjectInstance$FetchContentProvider(viz, region) {
+      return (ss.keyExists(this.$registeredVizzes, viz) ? this.$registeredVizzes[viz].$getContentProvider(region) : null);
+    },
+    $fetchCornersRenderer: function VisualInteropObjectInstance$FetchCornersRenderer(viz) {
+      return (ss.keyExists(this.$registeredVizzes, viz) ? this.$registeredVizzes[viz].get_$cornersRenderer() : null);
+    },
+    $fetchTooltip: function VisualInteropObjectInstance$FetchTooltip(viz) {
+      return (ss.keyExists(this.$registeredVizzes, viz) ? this.$registeredVizzes[viz].get_$tooltip() : null);
+    },
+    $getVizImageRegion: function VisualInteropObjectInstance$GetVizImageRegion(visualPart) {
+      if (ss.keyExists(tab.ModelUtils.visualPartToVizImageRegionForSceneMarginsMap, visualPart)) {
+        return tab.ModelUtils.visualPartToVizImageRegionForSceneMarginsMap[visualPart];
+      }
+      return 'viz';
+    }
+  });
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.VizZoneDesktop.VizImageRenderer
+  var $tab_VizImageRenderer = global.tab.VizImageRenderer = ss.mkType($asm, 'tab.VizImageRenderer', function(region, vizIdentifier, containers, domNode) {
+    this.$vizImage = null;
+    this.$overlayData = null;
+    this.$requestId = 0;
+    this.$region = null;
+    this.$vizIdentifier = null;
+    this.$requestInProgress = false;
+    this.$needToRequestAgain = false;
+    this.$domNode = null;
+    this.$vizImage = this.$makeVizImage();
+    containers.append(this.$vizImage);
+    containers.find('img').css('object-fit', 'none');
+    if (region === 'viz') {
+      this.$overlayData = this.$makeOverlay();
+      containers.append(this.$overlayData.$overlayCanvas);
+    }
+    this.$region = region;
+    this.$vizIdentifier = vizIdentifier;
+    this.$requestInProgress = false;
+    this.$domNode = domNode;
+  }, {
+    get_vizImage: function VizImageRenderer$get_VizImage() {
+      return this.$vizImage;
+    },
+    get_canvasInRelationToViewport: function VizImageRenderer$get_CanvasInRelationToViewport() {
+      return this.$vizImage.getBoundingClientRect();
+    },
+    loadImages: function VizImageRenderer$LoadImages() {
+      if (ss.isNullOrUndefined(this.$vizIdentifier)) {
+        return;
+      }
+      if (this.$requestInProgress) {
+        this.$needToRequestAgain = true;
+        return;
+      }
+      this.$requestInProgress = true;
+      this.requestImage();
+    },
+    requestImage: function VizImageRenderer$RequestImage() {
+      var imageRequest = new tab.FullVizImageRequestUrl(this.$vizIdentifier, this.$region);
+      this.$vizImage.src = imageRequest.get_imageRequestUrlString();
+    },
+    onImageLoadSuccess: function VizImageRenderer$OnImageLoadSuccess() {
+      tab.RenderingPerfUtils.dispatchRenderingPerfEvent(this.$vizIdentifier, this.$region, tab.RenderingPerfUtils.endSceneEventType);
+      this.clearOverlay($tab_VizImageRenderer.$clearSceneRequestId);
+      this.$clearRequestInProgressAndReloadIfNeeded();
+    },
+    onImageLoadError: function VizImageRenderer$OnImageLoadError() {
+      this.$clearRequestInProgressAndReloadIfNeeded();
+    },
+    resize: function VizImageRenderer$Resize(newSize) {
+      this.$vizImage.width = newSize.w;
+      this.$vizImage.height = newSize.h;
+      if (ss.isValue(this.$overlayData)) {
+        this.$overlayData.$overlayCanvas.width = newSize.w;
+        this.$overlayData.$overlayCanvas.height = newSize.h;
+      }
+    },
+    renderOverlay: function VizImageRenderer$RenderOverlay() {
+      if (this.$requestInProgress) {
+        return;
+      }
+      tab.RenderingPerfUtils.dispatchRenderingPerfEvent(this.$vizIdentifier, 'viz', tab.RenderingPerfUtils.endHoverEventType);
+      this.$overlayData.$draw();
+    },
+    clearOverlay: function VizImageRenderer$ClearOverlay(returnedRequestId) {
+      if (ss.isValue(this.$overlayData) && this.$requestIdMatchesOrIsSceneChangeClearRequest(returnedRequestId)) {
+        if (returnedRequestId !== $tab_VizImageRenderer.$clearSceneRequestId) {
+          tab.RenderingPerfUtils.dispatchRenderingPerfEvent(this.$vizIdentifier, this.$region, tab.RenderingPerfUtils.endClearOverlayEventType);
+        }
+        this.$overlayData.$clear(returnedRequestId);
+      }
+      this.$domNode.css('cursor', 'default');
+    },
+    loadOverlay: function VizImageRenderer$LoadOverlay(overlayPosition, returnedRequestId) {
+      if (this.$requestId === returnedRequestId) {
+        var imageRequest = new tab.OverlayImageRequestUrl(this.$vizIdentifier, overlayPosition);
+        this.$overlayData.$overlayImage.src = imageRequest.get_imageRequestUrlString();
+        this.$overlayData.$setStateForNextOverlay(overlayPosition, returnedRequestId);
+        this.$domNode.css('cursor', 'pointer');
+      }
+    },
+    buildOnHoverParameters: function VizImageRenderer$BuildOnHoverParameters(id, hoverPosition, region) {
+      return new $tab_OnHoverParameters(id, region, this.mapPointToSceneCoordinates(hoverPosition, this.get_canvasInRelationToViewport()), this.$incrementAndGetRequestId(), (ss.isValue(this.$overlayData) ? this.$overlayData.get_$lastHandledRequestID() : -1));
+    },
+    mapPointToSceneCoordinates: function VizImageRenderer$MapPointToSceneCoordinates(hoverPosition, canvasInRelationToViewport) {
+      return { xCoord: hoverPosition.xCoord - tab.DoubleUtil.roundToInt(canvasInRelationToViewport.left), yCoord: hoverPosition.yCoord - tab.DoubleUtil.roundToInt(canvasInRelationToViewport.top) };
+    },
+    $requestIdMatchesOrIsSceneChangeClearRequest: function VizImageRenderer$RequestIdMatchesOrIsSceneChangeClearRequest(returnedRequestId) {
+      return this.$requestId === returnedRequestId || returnedRequestId === $tab_VizImageRenderer.$clearSceneRequestId;
+    },
+    $incrementAndGetRequestId: function VizImageRenderer$IncrementAndGetRequestId() {
+      return ++this.$requestId;
+    },
+    $makeVizImage: function VizImageRenderer$MakeVizImage() {
+      var $t1 = new Image();
+      $t1.onload = ss.mkdel(this, function(evt) {
+        this.onImageLoadSuccess();
+      });
+      $t1.onerror = ss.mkdel(this, function(evt1) {
+        this.onImageLoadError();
+      });
+      return $t1;
+    },
+    $makeOverlay: function VizImageRenderer$MakeOverlay() {
+      var $t1 = new Image();
+      $t1.onload = ss.mkdel(this, function(evt) {
+        this.renderOverlay();
+      });
+      return new $tab_$OverlayData($t1);
+    },
+    $clearRequestInProgressAndReloadIfNeeded: function VizImageRenderer$ClearRequestInProgressAndReloadIfNeeded() {
+      this.$requestInProgress = false;
+      if (this.$needToRequestAgain) {
+        this.$needToRequestAgain = false;
+        this.loadImages();
+      }
+    }
+  });
+  ss.initClass($tab_$OverlayCanvasTemplate, spiff.Template, [ss.IDisposable]);
+  ss.initClass($tab_$OverlayData);
+  ss.initClass($tab_$VisualInteropObjectInstance$DesktopVizInstance);
+  ss.initInterface($tab_IDesktopModeHandler, { get_vizIdentifier: null, setScrollPosition: null, onHover: null, anchorZoom: null, onPan: null }, [ss.IDisposable]);
+  ss.initClass($tab_DesktopModeHandler, null, [$tab_IDesktopModeHandler, ss.IDisposable]);
+  ss.initClass($tab_DesktopRenderModeRegionProvider, null, [tab.IRegionContentProvider, spiff.IScrollable]);
+  ss.initClass($tab_HitTestResultParameters);
+  ss.initInterface($tab_IVisualInteropObjectInstance, { registerViz: null, unregisterViz: null, handleNewFrame: null, handleNewOverlay: null, handleClearOverlay: null, onScroll: null, onHover: null, onScale: null, onPan: null });
+  ss.initClass($tab_OnHoverParameters);
+  ss.initClass($tab_VisualInteropObjectFactory);
+  ss.initClass($tab_VisualInteropObjectInstance, null, [$tab_IVisualInteropObjectInstance]);
+  ss.initClass($tab_VizImageRenderer);
+  (function() {
+    $tab_$OverlayCanvasTemplate.$overlayTemplate = "<canvas class='tabCanvas' id=overlayCanvas></canvas>";
+  })();
+  (function() {
+    $tab_VizImageRenderer.$clearSceneRequestId = -1;
+  })();
+  (function() {
+    $tab_VisualInteropObjectFactory.$visualInteropObject = null;
+  })();
+})();
+// END VizZoneDesktop

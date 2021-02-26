@@ -1,0 +1,433 @@
+/*! BEGIN LegacyDojoUIWeb */
+
+(function() {
+  'dont use strict';
+  var $asm = {};
+  global.tab = global.tab || {};
+  ss.initAssembly($asm, 'vqllegacydojouiweb');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.UI.CategoricalLegendTemplateWeb
+  var $tab_CategoricalLegendTemplateWeb = global.tab.CategoricalLegendTemplateWeb = ss.mkType($asm, 'tab.CategoricalLegendTemplateWeb', function() {
+    this.scroller = null;
+    tab.CategoricalLegendTemplate.call(this, $($tab_CategoricalLegendTemplateWeb.$htmlTemplate));
+    this.scroller = this.getElementBySelector('.tabCatLegendScroll');
+    this.legendContentArea = this.columnsHolder;
+    if (BrowserSupport.BrowserSupport.IsFF()) {
+      this.columnsHolder.attr('tabindex', '-1');
+    }
+  });
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.UI.CategoricalLegendViewWeb
+  var $tab_CategoricalLegendViewWeb = global.tab.CategoricalLegendViewWeb = ss.mkType($asm, 'tab.CategoricalLegendViewWeb', function(viewModel) {
+    this.$inputSpec = null;
+    this.$iterButtons = null;
+    this.$hoverBehavior = null;
+    tab.CategoricalLegendView.call(this, viewModel, new $tab_CategoricalLegendTemplateWeb());
+    this.$inputSpec = this.$makeInputHandlers();
+    this.get_$catLegendTemplateWeb().domRoot.css('cursor', 'default');
+    this.$iterButtons = new tab.IteratorButtons(this.get_catLegendTemplate().columnsHolder, true, tab.LegendBaseViewModel.horizontalIteratorButtonSize);
+    this.get_$catLegendTemplateWeb().scroller.append(this.$iterButtons.get_domRoot());
+  }, {
+    get_$containerWidth: function CategoricalLegendViewWeb$get_ContainerWidth() {
+      return tab.DoubleUtil.roundToInt(this.get_$catLegendTemplateWeb().columnsHolder.width());
+    },
+    get_$scrollWidth: function CategoricalLegendViewWeb$get_ScrollWidth() {
+      return this.get_catLegendViewModel().get_categoricalLegendPM().catLegendLayout.colCount * this.get_catLegendViewModel().get_categoricalLegendPM().catLegendLayout.colWidth;
+    },
+    get_$catLegendTemplateWeb: function CategoricalLegendViewWeb$get_CatLegendTemplateWeb() {
+      return ss.cast(this.get_template(), $tab_CategoricalLegendTemplateWeb);
+    },
+    dispose: function CategoricalLegendViewWeb$Dispose() {
+      this.$inputSpec.dispose();
+      this.$hoverBehavior.dispose();
+      this.$iterButtons.dispose();
+      ss.makeGenericType(tab.BaseLegendView$1, [tab.CategoricalLegendViewModel]).prototype.dispose.call(this);
+    },
+    drawLegend: function CategoricalLegendViewWeb$DrawLegend(resetScrollOffset) {
+      tab.CategoricalLegendView.prototype.drawLegend.call(this, resetScrollOffset);
+      var catLegendPM = this.get_catLegendViewModel().get_categoricalLegendPM();
+      var catlayoutPM = catLegendPM.catLegendLayout;
+      var titleHeight = tab.DoubleUtil.roundToInt(this.get_$catLegendTemplateWeb().titleArea.height());
+      var highlightTop = 0;
+      var highlightRight = 0;
+      var highlighterInContent = !this.highlighterFitsUpperRight();
+      if (highlighterInContent && !this.get_catLegendViewModel().get_titleInline()) {
+        highlightTop += titleHeight;
+      }
+      var allowScrollX = false;
+      var allowScrollY = false;
+      if (this.$shouldShowCustomScrollArrows()) {
+        this.get_catLegendTemplate().columnsHolder.css({ 'overflow-x': 'hidden' });
+        this.get_catLegendTemplate().columnsHolder.css({ 'overflow-y': 'hidden' });
+        var colWidth = this.get_catLegendViewModel().get_categoricalLegendPM().catLegendLayout.colWidth;
+        this.$iterButtons.set_scrollIncrement(colWidth);
+        this.$iterButtons.reset();
+        this.viewportWidth -= tab.LegendBaseViewModel.horizontalIteratorButtonHolderWidth;
+        if (highlighterInContent) {
+          highlightRight += tab.LegendBaseViewModel.horizontalIteratorButtonHolderWidth + ss.makeGenericType(tab.BaseLegendView$1, [tab.CategoricalLegendViewModel]).controlsMargin;
+        }
+        if (this.get_catLegendViewModel().get_titleInline()) {
+          this.get_$catLegendTemplateWeb().scroller.css({ top: 0 + 'px' });
+        }
+        else {
+          this.get_$catLegendTemplateWeb().scroller.css({ top: titleHeight + 'px' });
+        }
+      }
+      else if (catlayoutPM.legendLayout === 'horizontal' || catlayoutPM.legendLayout === 'grid') {
+        allowScrollX = true;
+      }
+      else {
+        allowScrollY = true;
+      }
+      if (highlighterInContent && allowScrollY) {
+        var contentHeight = catlayoutPM.rowCount * catlayoutPM.rowHeight;
+        if (this.viewportHeight < contentHeight) {
+          var scrollWidth = tab.Metrics.get_scrollW();
+          highlightRight += scrollWidth;
+        }
+      }
+      this.get_catLegendTemplate().columnsHolder.css({ 'overflow-x': (allowScrollX ? 'auto' : 'hidden'), 'overflow-y': (allowScrollY ? 'auto' : 'hidden') });
+      this.get_$catLegendTemplateWeb().titleControls.css({ top: highlightTop + 'px', right: highlightRight + 'px' });
+      this.setContentSize(this.viewportHeight, this.viewportWidth);
+      this.$updateScroller();
+    },
+    $makeInputHandlers: function CategoricalLegendViewWeb$MakeInputHandlers() {
+      this.$hoverBehavior = new spiff.HoverBehavior(this, null, ss.mkdel(this, this.$onMouseEnter), ss.mkdel(this, this.$onMouseLeave));
+      var $t1 = new EventUtils.EventHandleSpec();
+      $t1.tap = ss.mkdel(this, this.$onTap);
+      $t1.hover = ss.mkdel(this, this.$onHover);
+      $t1.hoverDelay = EventUtils.Hover.HoverTime;
+      var spec = $t1;
+      var mh = new EventUtils.TableauEventHandler(this.get_$catLegendTemplateWeb().domRoot.get(0), spec);
+      return mh;
+    },
+    $onMouseEnter: function CategoricalLegendViewWeb$OnMouseEnter(e) {
+      this.showOrHideTitleControls(true);
+    },
+    $onMouseLeave: function CategoricalLegendViewWeb$OnMouseLeave(e) {
+      var hasKeyboardFocus = $.contains(this.element[0], document.activeElement) && !spiff.FocusManager.wasFocusedByPointer();
+      this.showOrHideTitleControls(hasKeyboardFocus);
+    },
+    $onHover: function CategoricalLegendViewWeb$OnHover(pseudoEvent) {
+      if (EventUtils.DragDropManager.get_isDragging()) {
+        return;
+      }
+      var hoveredItem = this.getLegendItemFromEvent(pseudoEvent);
+      if (ss.isValue(hoveredItem)) {
+        var viewportPos = this.getViewportPosition(pseudoEvent);
+        var docPoint = this.getDocumentPosition(viewportPos);
+        var selRect = { x: docPoint.x, y: docPoint.y, w: 0, h: 0 };
+        this.performHoverOnItem(viewportPos, selRect);
+        tab.Log.get(this).debug('Show ubertip for: %o', [hoveredItem]);
+      }
+      pseudoEvent.preventDefault();
+    },
+    $onTap: function CategoricalLegendViewWeb$OnTap(pseudoEvent) {
+      var item = this.getLegendItemFromEvent(pseudoEvent);
+      var selectionType = tab.SelectActionResolver.fromNormalizedEvent(pseudoEvent, 2);
+      var selectionHandled = false;
+      if (ss.isValue(item)) {
+        var zoneSelectionType = ((pseudoEvent.ctrlKey || pseudoEvent.metaKey) ? 'addorkeep' : 'replace');
+        var viewportPos = this.getViewportPosition(pseudoEvent);
+        var docPoint = this.getDocumentPosition(viewportPos);
+        var selRect = { x: docPoint.x, y: docPoint.y, w: 0, h: 0 };
+        selectionHandled = this.performSelectOnItem(item, selectionType, viewportPos, selRect, zoneSelectionType);
+      }
+      else {
+        var zoneSelectionType1 = ((pseudoEvent.ctrlKey || pseudoEvent.metaKey) ? 'addorremove' : 'replace');
+        selectionHandled = this.get_catLegendViewModel().selectNone(selectionType, zoneSelectionType1);
+      }
+      if (selectionHandled) {
+        pseudoEvent.stopPropagation();
+      }
+      pseudoEvent.preventDefault();
+    },
+    $shouldShowCustomScrollArrows: function CategoricalLegendViewWeb$ShouldShowCustomScrollArrows() {
+      var catLayoutPM = this.get_catLegendViewModel().get_categoricalLegendPM().catLegendLayout;
+      if (catLayoutPM.legendLayout === 'vertical') {
+        return false;
+      }
+      var requiredHeight = catLayoutPM.rowHeight + tab.Metrics.get_scrollH();
+      return this.get_$containerWidth() < this.get_$scrollWidth() && requiredHeight >= this.get_$catLegendTemplateWeb().columnsHolder.height();
+    },
+    $updateScroller: function CategoricalLegendViewWeb$UpdateScroller() {
+      if (this.$shouldShowCustomScrollArrows()) {
+        this.get_$catLegendTemplateWeb().scroller.show();
+      }
+      else {
+        this.get_$catLegendTemplateWeb().scroller.hide();
+      }
+    }
+  });
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoUIWeb.ContinuousSliderWeb
+  var $tab_ContinuousSliderWeb = global.tab.ContinuousSliderWeb = ss.mkType($asm, 'tab.ContinuousSliderWeb', function(viewModel) {
+    this.$horizontalSlider = null;
+    this.$startSub = null;
+    this.$stopSub = null;
+    this.$isDragging = false;
+    tab.ContinuousSlider.call(this, viewModel);
+    this.viewModel.add_enabledChanged(ss.mkdel(this, this.applyEnabledState));
+    this.disposables.add$1(new tab.CallOnDispose(ss.mkdel(this, function() {
+      this.viewModel.remove_enabledChanged(ss.mkdel(this, this.applyEnabledState));
+    })));
+    var sliderParams = { templateString: $tab_ContinuousSliderWeb.tableauSliderTemplate, onChange: ss.mkdel(this, this.$handleIntermediateChanges), value: viewModel.get_sliderCurrentValue(), minimum: viewModel.get_sliderMinimumValue(), maximum: viewModel.get_sliderMaximumValue(), slideDuration: 0, intermediateChanges: true, style: 'width:' + viewModel.get_pixelWidth() + 'px;', showButtons: false };
+    this.$horizontalSlider = new dijit.form.HorizontalSlider(sliderParams, this.get_template().domRoot.get(0));
+    this.$startSub = dojo.subscribe('/dnd/move/start', ss.mkdel(this, this.$startDrag));
+    this.$stopSub = dojo.subscribe('/dnd/move/stop', ss.mkdel(this, this.$stopDrag));
+    this.viewModel.add_sliderValueChange(ss.mkdel(this, this.$updateSlider));
+    this.disposables.add$1(new tab.CallOnDispose(ss.mkdel(this, function() {
+      this.viewModel.remove_sliderValueChange(ss.mkdel(this, this.$updateSlider));
+    })));
+    this.get_template().domRoot.append(this.$horizontalSlider.domNode);
+    if (this.viewModel.get_ruleTickCount() > 0) {
+      var rule = $("<div class='tabSliderRule'></div>");
+      var rulesParams = ss.mkdict(['count', this.viewModel.get_ruleTickCount()]);
+      var horizontalRule = new dijit.form.HorizontalRule(rulesParams, rule.get(0));
+      rule.append(horizontalRule.domNode);
+      horizontalRule.startup();
+      this.get_template().domRoot.append(rule);
+    }
+    this.$isDragging = false;
+    this.applyEnabledState();
+  }, {
+    $updateSlider: function ContinuousSliderWeb$UpdateSlider(newFractionValue) {
+      this.$horizontalSlider._setValueAttr(this.viewModel.get_sliderCurrentValue());
+    },
+    $startDrag: function ContinuousSliderWeb$StartDrag(mover) {
+      if (!this.viewModel.get_enabled()) {
+        return;
+      }
+      if (ss.isValue(mover) && ss.referenceEquals(mover.node, this.$horizontalSlider.sliderHandle)) {
+        this.$isDragging = true;
+      }
+    },
+    $stopDrag: function ContinuousSliderWeb$StopDrag(mover) {
+      if (!this.viewModel.get_enabled()) {
+        return;
+      }
+      if (ss.isValue(mover) && ss.referenceEquals(mover.node, this.$horizontalSlider.sliderHandle)) {
+        this.$isDragging = false;
+        this.applyChanges(this.viewModel.get_sliderIntermediateValue());
+      }
+    },
+    $handleIntermediateChanges: function ContinuousSliderWeb$HandleIntermediateChanges(newValue) {
+      if (!this.viewModel.get_enabled()) {
+        return;
+      }
+      this.viewModel.applyIntermediateChange(newValue);
+      if (!this.$isDragging) {
+        this.applyChanges(this.viewModel.get_sliderIntermediateValue());
+      }
+    },
+    dispose: function ContinuousSliderWeb$Dispose() {
+      dojo.unsubscribe(this.$startSub);
+      dojo.unsubscribe(this.$stopSub);
+      tab.ContinuousSlider.prototype.dispose.call(this);
+    },
+    applyEnabledState: function ContinuousSliderWeb$ApplyEnabledState() {
+      this.$horizontalSlider.setDisabled(!this.viewModel.get_enabled());
+    }
+  });
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoUIWeb.DojoWidgetsWeb
+  var $tab_DojoWidgetsWeb = global.tab.DojoWidgetsWeb = ss.mkType($asm, 'tab.DojoWidgetsWeb');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoUIWeb.LegacyDojoUIWebFactory
+  var $tab_LegacyDojoUIWebFactory = global.tab.LegacyDojoUIWebFactory = ss.mkType($asm, 'tab.LegacyDojoUIWebFactory', function() {
+    tab.BaseLegacyDojoUIModule.call(this);
+  }, {
+    createPageView: function LegacyDojoUIWebFactory$CreatePageView(zoneContentViewModel) {
+      return new tab.PageView(zoneContentViewModel);
+    },
+    createLegacyQuickFilterDisplayView: function LegacyDojoUIWebFactory$CreateLegacyQuickFilterDisplayView(zoneContentViewModel) {
+      return new tab.LegacyQuickFilterDisplayView(zoneContentViewModel);
+    },
+    createParameterControlView: function LegacyDojoUIWebFactory$CreateParameterControlView(zoneContentViewModel) {
+      return new tab.ParameterControlView(zoneContentViewModel);
+    },
+    createLegacyLegendView: function LegacyDojoUIWebFactory$CreateLegacyLegendView(viewModel) {
+      return new $tab_LegacyLegendViewWeb(viewModel);
+    },
+    createContinuousSlider: function LegacyDojoUIWebFactory$CreateContinuousSlider(viewModel) {
+      return new $tab_ContinuousSliderWeb(viewModel);
+    }
+  });
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoUIWeb.LegacyDojoWidgetMakerWeb
+  var $tab_LegacyDojoWidgetMakerWeb = global.tab.LegacyDojoWidgetMakerWeb = ss.mkType($asm, 'tab.LegacyDojoWidgetMakerWeb', function() {
+  }, {
+    makeCurrentPagePanelWidget: function LegacyDojoWidgetMakerWeb$MakeCurrentPagePanelWidget(props) {
+      return new tableau.base.widget.CurrentPagePanel(props);
+    },
+    makeFilterPanelWidget: function LegacyDojoWidgetMakerWeb$MakeFilterPanelWidget(props) {
+      return new tableau.base.widget.QuickFilterPanel(props);
+    },
+    makeControlWidget: function LegacyDojoWidgetMakerWeb$MakeControlWidget(props) {
+      return new tableau.base.widget.ParameterControl(props);
+    }
+  });
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.UIWeb.LegacyLegendTemplateWeb
+  var $tab_LegacyLegendTemplateWeb = global.tab.LegacyLegendTemplateWeb = ss.mkType($asm, 'tab.LegacyLegendTemplateWeb', function() {
+    this.domHorizScrollButtonHolder = null;
+    tab.LegacyLegendTemplate.call(this, $($tab_LegacyLegendTemplateWeb.$htmlTemplate));
+    this.domHorizScrollButtonHolder = this.getElementBySelector('.tabCatLegendScroll');
+    this.legendContentArea = this.domContent;
+  });
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.UIWeb.LegacyLegendViewWeb
+  var $tab_LegacyLegendViewWeb = global.tab.LegacyLegendViewWeb = ss.mkType($asm, 'tab.LegacyLegendViewWeb', function(viewModel) {
+    this.$disposables = new tab.DisposableHolder();
+    tab.LegacyLegendView.call(this, viewModel, new $tab_LegacyLegendTemplateWeb());
+  }, {
+    onAddedToDom: function LegacyLegendViewWeb$OnAddedToDom() {
+      tab.LegacyLegendView.prototype.onAddedToDom.call(this);
+      var horizScroll = ss.cast(this.get_legendTemplate(), $tab_LegacyLegendTemplateWeb).domHorizScrollButtonHolder;
+      horizScroll.append(this.iterButtons.get_domRoot());
+      horizScroll.css({ visibility: 'hidden' });
+    },
+    dispose: function LegacyLegendViewWeb$Dispose() {
+      this.$disposables.dispose();
+      tab.LegacyLegendView.prototype.dispose.call(this);
+    },
+    makeViewerInputHandler: function LegacyLegendViewWeb$MakeViewerInputHandler(element) {
+      var $t1 = new EventUtils.EventHandleSpec();
+      $t1.tap = ss.mkdel(this, this.onTap);
+      $t1.hover = ss.mkdel(this, this.onHover);
+      var spec = $t1;
+      return new EventUtils.TableauEventHandler(element, spec);
+    },
+    layoutButtons: function LegacyLegendViewWeb$LayoutButtons(contentSize) {
+      var titleControlsTop = 0;
+      var titleControlsRight = 0;
+      this.get_legendTemplate().titleControls.css({ right: '' });
+      var highlighterInContent = !this.highlighterFitsUpperRight();
+      if (highlighterInContent && !this.get_legendViewModel().get_titleInline()) {
+        titleControlsTop += this.get_legendViewModel().get_titleHeight();
+      }
+      var domHorizScrollButtonHolder = ss.cast(this.get_template(), $tab_LegacyLegendTemplateWeb).domHorizScrollButtonHolder;
+      domHorizScrollButtonHolder.css({ visibility: 'hidden' });
+      if (this.get_serverRenderedModel().isVisuallyCat) {
+        if (this.get_serverRenderedModel().legendLayout !== 'vertical') {
+          if (contentSize.h < tab.Metrics.get_minScrollHeight() && contentSize.h > 1) {
+            this.get_domNode().classList.add('LegendHorizontal');
+            var bodyW = this.bodySize.w;
+            if (bodyW > contentSize.w) {
+              contentSize.w -= tab.LegendBaseViewModel.horizontalIteratorButtonHolderWidth;
+              if (this.get_serverRenderedModel().isVisuallyCat && (!!this.get_legendViewModel().get_titleInline() || !this.get_legendViewModel().get_hasTitle())) {
+                contentSize.w -= 18;
+                this.get_legendTemplate().titleControls.css({ right: tab.LegendBaseViewModel.horizontalIteratorButtonHolderWidth + 4 + 'px' });
+              }
+              this.iterButtons.set_scrollIncrement(this.get_serverRenderedModel().colWidth || (ss.idiv(this.get_legendTemplate().get_contentArea().get(0).clientWidth, 2) || $tab_LegacyLegendViewWeb.$fallbackScrollIterDistance));
+              var horizScrollButtonHolderTop = (!!this.get_legendViewModel().get_titleInline() ? 0 : this.get_legendViewModel().get_titleHeight());
+              domHorizScrollButtonHolder.css({ visibility: '', top: horizScrollButtonHolderTop + 'px' });
+              if (highlighterInContent) {
+                titleControlsRight += tab.LegendBaseViewModel.horizontalIteratorButtonHolderWidth + ss.makeGenericType(tab.BaseLegendView$1, [tab.LegacyLegendViewModel]).controlsMargin;
+              }
+            }
+            else {
+              domHorizScrollButtonHolder.css({ visibility: 'hidden' });
+              this.get_legendTemplate().get_contentArea().css({ 'overflow-x': 'auto' });
+            }
+          }
+          else {
+            this.get_legendTemplate().get_contentArea().css({ overflow: 'auto' });
+          }
+        }
+        if (this.get_serverRenderedModel().legendLayout === 'vertical') {
+          this.get_legendTemplate().get_contentArea().css({ 'overflow-y': 'auto' });
+          if (highlighterInContent) {
+            if (this.get_serverRenderedModel().regionHeight > contentSize.h) {
+              titleControlsRight += tab.Metrics.get_scrollW();
+            }
+          }
+        }
+        tab.DomUtil.setMarginBox(this.get_legendTemplate().get_contentArea().get(0), { w: contentSize.w, h: contentSize.h });
+      }
+      else {
+        domHorizScrollButtonHolder.css({ visibility: 'hidden' });
+        this.get_legendTemplate().get_contentArea().css({ overflow: 'hidden' });
+        if (contentSize.w > 0) {
+          tab.DomUtil.setMarginBox(this.get_legendTemplate().get_contentArea().get(0), { w: contentSize.w, h: contentSize.h });
+        }
+      }
+      this.get_legendTemplate().titleControls.css({ top: titleControlsTop + 'px', right: titleControlsRight + 'px' });
+      this.iterButtons.updateButtonState();
+    },
+    onTap: function LegacyLegendViewWeb$OnTap(pseudoEvent) {
+      if (pseudoEvent.originalEvent['button'] > 1) {
+        return;
+      }
+      this.disallowHover();
+      var documentPoint = this.getDocumentPoint(pseudoEvent);
+      var point = this.documentPointToContentPoint(documentPoint);
+      var contentPoint = { x: point.x, y: point.y, w: 0, h: 0 };
+      var selectAction = pseudoEvent.GetSelectAction();
+      var toolTipAction = ss.mkdel(this, function() {
+        this.get_legendTooltip().singleSelectCoordinates(documentPoint, point, this.get_legendViewModel().get_regionType(), 'legenditem', this.getFieldNameVec());
+      });
+      if (this.get_serverRenderedModel().legendType !== 'map') {
+        var dashboard = tab.ModelUtils.findContentDashboard(null);
+        if (dashboard.get_isFlexibleLayoutEnabled()) {
+          var zoneToSelect = dashboard.get_readyZoneID();
+          var selectionType = 'replace';
+          if (tab.DashboardView.isMultiSelectClick(pseudoEvent)) {
+            selectionType = 'addorremove';
+            var topParent = dashboard.getTopmostParent(this.legacyLegendViewModel.get_zoneID());
+            if (topParent.get_zoneType() === 'layout-group') {
+              zoneToSelect = topParent.get_zoneId();
+            }
+          }
+          tab.SelectionClientCommands.selectRectRegionAndDoUbertip$1(this.get_legendViewModel().get_regionType(), contentPoint, selectAction, this.get_visualId(), toolTipAction, selectionType, zoneToSelect, this.getFieldNameVec());
+          pseudoEvent.stopPropagation();
+        }
+        else {
+          tab.SelectionClientCommands.selectRectRegionAndDoUbertip(this.get_legendViewModel().get_regionType(), contentPoint, selectAction, this.get_visualId(), toolTipAction, this.getFieldNameVec());
+        }
+      }
+      else {
+        toolTipAction();
+      }
+    },
+    allowHover: function LegacyLegendViewWeb$AllowHover() {
+      this.eventHandler.unsuppressHover();
+    },
+    disallowHover: function LegacyLegendViewWeb$DisallowHover() {
+      this.eventHandler.suppressHover();
+    }
+  });
+  ss.initClass($tab_CategoricalLegendTemplateWeb, tab.CategoricalLegendTemplate, [ss.IDisposable]);
+  ss.initClass($tab_CategoricalLegendViewWeb, tab.CategoricalLegendView, [tab.IWidget, ss.makeGenericType(tab.ICategoricalLegendView$1, [tab.CategoricalLegendViewModel]), ss.makeGenericType(tab.IView$1, [tab.CategoricalLegendViewModel]), ss.IDisposable, tab.IAppendableView]);
+  ss.initClass($tab_ContinuousSliderWeb, tab.ContinuousSlider, [tab.IWidget, ss.makeGenericType(tab.IView$1, [tab.ContinuousSliderViewModel]), ss.IDisposable, tab.IAppendableView, tab.IContinuousSlider]);
+  ss.initClass($tab_DojoWidgetsWeb);
+  ss.initClass($tab_LegacyDojoUIWebFactory, tab.BaseLegacyDojoUIModule, [tab.ILegacyDojoUIModule]);
+  ss.initClass($tab_LegacyDojoWidgetMakerWeb, null, [tab.ILegacyDojoWidgetMaker]);
+  ss.initClass($tab_LegacyLegendTemplateWeb, tab.LegacyLegendTemplate, [ss.IDisposable]);
+  ss.initClass($tab_LegacyLegendViewWeb, tab.LegacyLegendView, [tab.IWidget, ss.makeGenericType(tab.ILegacyLegendView$1, [tab.LegacyLegendViewModel]), ss.makeGenericType(tab.IView$1, [tab.LegacyLegendViewModel]), ss.IDisposable, tab.IAppendableView]);
+  (function() {
+    $tab_CategoricalLegendTemplateWeb.$htmlTemplate = "<div class='tabLegendPanel' style='position : relative;'>" + "<div class='tabLegendBox'>" + "<h3 class='tabLegendTitle'></h3>" + "<div class='tabLegendContentHolder' style='overflow:auto'>" + "<div class='tabLegendColumnHolder' style='white-space:nowrap'></div>" + '</div>' + "<div class='tabCatLegendScroll'></div>" + '</div>' + '</div>';
+  })();
+  (function() {
+    tab.ObjectRegistry.registerType(tab.CategoricalLegendView, $tab_CategoricalLegendViewWeb).call(null);
+    tab.ObjectRegistry.registerType(ss.makeGenericType(tab.ICategoricalLegendView$1, [tab.ICategoricalLegendViewModel]), $tab_CategoricalLegendViewWeb).call(null);
+  })();
+  (function() {
+    $tab_ContinuousSliderWeb.tableauSliderTemplate = "<div class='dijit dijitReset'>" + "<div class='dijitReset tableauSlider' dojoAttachPoint='tableauSlider'>" + "<table class='dijit dijitReset' cellspacing='0' cellpadding='0' border='0' rules='none'>" + "<tr class='dijitReset'>" + "<td class='dijitReset'></td>" + "<td dojoAttachPoint='containerNode,topDecoration' class='dijitReset' style='text-align:center;width:100%;'></td>" + "<td class='dijitReset'></td>" + '</tr>' + "<tr class='dijitReset'>" + "<td class='dijitReset'>" + "<div class='dijitSliderBar dijitSliderBumper dijitSliderBumperH dijitSliderLeftBumper dijitSliderLeftBumper' dojoAttachEvent='onclick:_onClkDecBumper'></div>" + '</td>' + "<td class='dijitReset'>" + "<input dojoAttachPoint='valueNode' type='hidden' name='${name}'>" + "<div class='dijitReset dijitSliderBarContainerH' waiRole='presentation' dojoAttachPoint='sliderBarContainer'>" + "<div waiRole='presentation' dojoAttachPoint='progressBar' class='dijitSliderBar dijitSliderBarH dijitSliderProgressBar dijitSliderProgressBarH' dojoAttachEvent='onclick:_onBarClick'>" + "<div class='dijitSliderMoveable dijitSliderMoveableH'>" + "<div dojoAttachPoint='sliderHandle,focusNode' class='dijitSliderImageHandle dijitSliderImageHandleH' dojoAttachEvent='onmousedown:_onHandleClick' waiRole='slider' valuemin='${minimum}' valuemax='${maximum}'></div>" + '</div>' + '</div>' + "<div waiRole='presentation' dojoAttachPoint='remainingBar' class='dijitSliderBar dijitSliderBarH dijitSliderRemainingBar dijitSliderRemainingBarH' dojoAttachEvent='onclick:_onBarClick'></div>" + '</div>' + '</td>' + "<td class='dijitReset'>" + "<div class='dijitSliderBar dijitSliderBumper dijitSliderBumperH dijitSliderRightBumper dijitSliderRightBumper' dojoAttachEvent='onclick:_onClkIncBumper'></div>" + '</td>' + '</tr>' + "<tr class='dijitReset'>" + "<td class='dijitReset'></td>" + "<td dojoAttachPoint='containerNode,bottomDecoration' class='dijitReset'></td>" + "<td class='dijitReset'></td>" + '</tr>' + '</table>' + '</div>' + "<div class='dijitReset dijitSliderButtonContainer dijitSliderButtonContainerH tableauArrowDec' style='display:none' dojoAttachPoint='decrementButton'>" + "<div class='dijitSliderDecrementIconH' tabIndex='-1'>" + "<span class='dijitSliderButtonInner'>-</span>" + '</div>' + '</div>' + "<div class='dijitReset dijitSliderButtonContainer dijitSliderButtonContainerH tableauArrowInc' style='display:none' dojoAttachPoint='incrementButton'>" + "<div class='dijitSliderIncrementIconH' tabIndex='-1'>" + "<span class='dijitSliderButtonInner'>+</span>" + '</div>' + '</div>' + '</div>';
+  })();
+  (function() {
+    dojo.addOnLoad(function() {
+      dojo.require('tableau.web.WebClient');
+    });
+  })();
+  (function() {
+    $tab_LegacyLegendTemplateWeb.$htmlTemplate = "<div class='LegendPanel'>" + "<div class='LegendBox'>" + "<h3 class='tabLegendTitle'></h3>" + "<div class='LegendContent'>" + "<img class='LegendImageBody'/>" + '</div>' + "<div class='tabCatLegendScroll'></div>" + '</div>' + "<div class='tabLegendTitleControls'>" + "<div class='" + tab.LegendTemplate.legendHighlighterButtonClass + ' ' + tab.LegendTemplate.legendTitleControlsButtonsClass + "'>" + "<div class='" + tab.LegendTemplate.legendHighlighterButtonIconClass + "'></div>" + '</div>' + "<div class='" + tab.LegendTemplate.legendContextMenuButtonClass + ' ' + tab.LegendTemplate.legendTitleControlsButtonsClass + "'>" + "<div class='" + tab.LegendTemplate.legendContextMenuButtonIconClass + "'></div>" + '</div>' + '</div>' + '</div>';
+  })();
+  (function() {
+    $tab_LegacyLegendViewWeb.$fallbackScrollIterDistance = 120;
+  })();
+  (function() {
+    tab.ObjectRegistry.registerType(tab.ILegacyDojoWidgetMaker, $tab_LegacyDojoWidgetMakerWeb).call(null);
+  })();
+})();
+// END LegacyDojoUIWeb

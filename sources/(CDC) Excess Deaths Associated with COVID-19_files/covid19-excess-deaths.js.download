@@ -1,0 +1,381 @@
+/* Raw JS */
+var viz;
+var workbook;
+var activeSheet;
+var listOfWorksheets;
+
+var lock = 0;
+
+var excludedTables = [];
+
+var table_de;
+
+var numberOfTables;
+var numberOfTablesReturned;
+
+$(document).ready(function (e)
+{
+    initializeViz();
+});
+
+function initializeViz()
+{
+    var placeholderDiv = document.getElementById("visualization");
+    var url = "https://public.tableau.com/views/COVID_excess_mort_withcauses_02242021/WeeklyExcessDeaths";
+    var options = {
+        hideToolbar: true,
+        hideTabs: true,
+        onFirstInteractive: function ()
+        {
+            workbook = viz.getWorkbook();
+            getUnderlyingData();
+        }
+    };
+    viz = new tableau.Viz(placeholderDiv, url, options);
+    viz.addEventListener(tableau.TableauEventName.FILTER_CHANGE, onFilterChange);
+    var viztitle = document.querySelector("#visualization iframe");
+    viztitle.setAttribute("title", "Data visualization described by data tables below");
+}
+
+function switchView(viewName)
+{
+    workbook.activateSheetAsync(viewName).then(getUnderlyingData);
+}
+
+function updateDashboardTitle(title)
+{
+    $("#dashboardTitle").html(title);
+    $("#tablesLabel").html(title + " - The following data tables describe the currently displayed dashboard");
+
+}
+
+function onFilterChange()
+{
+
+    if (lock == 1)
+    {
+        setTimeout(500, onFilterChange);
+        return;
+    }
+    else
+    {
+        getUnderlyingData();
+    }
+}
+
+var currentTableName = []; //Used to keep track of the current table's name'
+
+function getUnderlyingData()
+{
+
+    lock = 1;
+
+    var tableHTML = "";
+
+    var options = {
+        maxRows: 0,
+        ignoreAliases: false,
+        ignoreSelection: true,
+        includeAllColumns: false
+    };
+
+    var sheet;
+
+
+    /* Get currently active sheet */
+    activeSheet = workbook.getActiveSheet();
+
+    /* Get list of worksheets for activeSheet */
+    listOfWorksheets = activeSheet.getWorksheets();
+
+    numberOfTablesReturned = 0;
+    numberOfTables = listOfWorksheets.length;
+
+    listOfWorksheets.forEach(function (sheet)
+    {
+
+        var sheetName = sheet.getName();
+        console.log(sheetName);
+
+        if (excludedTables.indexOf(sheetName) != -1)
+        {
+            numberOfTables--;
+        }
+        else
+        {
+            currentTableName.push(sheetName);
+
+            sheet.getUnderlyingDataAsync(options).then(function (t)
+            {
+
+                var columns = t.getColumns();
+                var data = t.getData();
+
+                if (data.length == 0)
+                {
+                    numberOfTablesReturned++;
+                    return;
+                }
+
+                var fieldNameMap = $.map(columns, function (col) { return col.$impl.$fieldName; });
+
+                var dataToReturn = $.map(data, function (d)
+                {
+                    return d.reduce(function (memo, value, idx)
+                    {
+                        memo[fieldNameMap[idx]] = value.formattedValue; return memo;
+                    }, {});
+                });
+                console.log(sheetName);
+                console.log(fieldNameMap);
+                
+                var sheetParams = {
+                    'Weekly excess deaths': {
+                        'colOrder': [4, 2, 3, 5, 0, 1, 9, 10, 11, 8]
+                    },
+                    'Excess deaths with and without COVID-19': {
+                        'colOrder': [4, 2, 3, 5, 0, 1, 9, 10, 11, 8]
+                    },
+                    'Excess deaths with and without weighting': {
+                        'colOrder': [4, 2, 3, 5, 0, 1, 9, 10, 11, 8]
+                    },
+                    'Total number of excess deaths in the US': {
+                        'colOrder': [0, 1, 2, 4]
+                    },
+                    'Total number of excess deaths by state': {
+                        'colOrder': [0, 4, 1, 2]
+                    },
+                    'Percent excess deaths': {
+                        'colOrder': [0, 1, 3, 4, 5]
+                    },
+                    'Weekly counts of death by age': {
+                        'colOrder': [4, 0, 3, 1, 2, 6, 5]
+                    },
+                    'Weekly counts of deaths by race and Hispanic origin': {
+                        'colOrder': [5, 6, 3, 2, 1, 0, 7, 8]
+                    },
+                    'Change in weekly counts of death by race and Hispanic origin': {
+                        'colOrder': [5, 3, 2, 0, 1, 7, 8]
+                    },
+                    'Weekly counts of death by cause group': {
+                        'colOrder': [4, 0, 2, 1, 6, 7, 5] 
+                    },
+                    'Weekly counts of death by specific causes': {
+                        'colOrder': [4, 0, 1, 7, 2, 6, 3, 8, 5]
+                    },
+                    'Change in weekly counts of death by cause': {
+                        'colOrder': [5, 8, 3, 0, 1, 9, 2, 4, 6]
+                    },
+                    'Total number of deaths above average in 2020': {
+                        'colOrder': [3, 0, 1, 2]
+                    },
+                    'Total number of deaths above average by jurisdiction and cause': {
+                        'colOrder': [0, 1, 2]
+                    }
+                };
+
+                colOrder = sheetParams[sheetName].colOrder;
+
+                tableHTML += "<h3 tabindex='0' class='header'>"
+                    + "<img class='imgRotate' style='margin-right: 10px; margin-left: 5px; margin-bottom: 3px;' src='../../../data-visualization/images/plus_m.png' data-swap='../../../data-visualization/images/minus_m.png' alt=''/>"
+                    + sheet.getName() + "</h3>" + tabulate(fieldNameMap, dataToReturn, colOrder);
+
+                $("#tables").html(tableHTML);
+
+                numberOfTablesReturned++;
+
+
+
+            })
+                .then(function ()
+                {
+                    if (numberOfTables == numberOfTablesReturned)
+                    {
+                        initDataTables();
+                        initAccordion();
+                        lock = 0;
+                    }
+                });
+
+        }
+
+    })
+
+
+}
+
+function initDataTables()
+{
+
+    console.log("initDataTables");
+
+    table_de = $("table.table-bordered.table-hidden").DataTable({
+        "paging": true,
+        "searching": true,
+        "info": true,
+        "scrollX": false
+    });
+
+    console.log("endingDataTables");
+}
+
+function initAccordion()
+{
+
+    console.log("initAccordion");
+
+    $("div.dataTables_wrapper").addClass("wrap");
+
+    $("h3.header").each(function ()
+    {
+
+        $(this).attr("aria-expanded", "false");
+        $(this).click(toggleTables);
+        $(this).keyup(function (event)
+        {
+            if (event.keyCode == 13)
+            {
+                $(this).trigger('click');
+            }
+        });
+
+
+    });
+
+    $('div.dataTables_wrapper.no-footer.wrap').each(function ()
+    {
+        $(this).attr("aria-hidden", "true");
+        $(this).css("display", "none");
+        $(this).css("overflow", "auto");
+    });
+
+    $('table.table-hidden').removeClass("table-hidden");
+
+}
+
+function toggleTables()
+{
+
+    var currentHeader = $(this);
+
+    /* Image to toggle within header */
+    var currentHeaderImage = currentHeader.children();
+
+    /* DIV containing data table */
+    var divBelowCurrentHeader = currentHeader.next();
+
+    var currentSource = currentHeaderImage.attr("src");
+    var swap = currentHeaderImage.attr("data-swap");
+
+    currentHeaderImage.attr("src", swap).attr("data-swap", currentSource);
+
+    divBelowCurrentHeader.stop().slideToggle(500, function ()
+    {
+
+        if (divBelowCurrentHeader.css('display') == 'none')
+        {
+            divBelowCurrentHeader.attr("aria-hidden", "true");
+            currentHeader.attr("aria-expanded", "false");
+        }
+        else if (divBelowCurrentHeader.css('display') == 'block')
+        {
+            divBelowCurrentHeader.attr("aria-hidden", "false");
+            currentHeader.attr("aria-expanded", "true");
+        }
+
+    });
+
+}
+
+function tabulate(columns, data, colOrder)
+{
+
+    var table = "";
+
+    table += "<table style='width: 99.9%;' class='table table-bordered table-hidden'><thead style='width: 100%;'><tr style='width: 100%;'>";
+
+    //Generate table headers 
+
+    const EXCLUDED_COLUMNS = ["Alarm", "Flag", "TotalExcess", "Cutpctex", "T2020", "seq", "ussel"];
+
+    //const INDV_EXCLUDED_COLUMNS =
+    //    [
+    //        ["Age-adjusted and Age-specific Death Rates‡ for Drug Poisoning by Race and Hispanic Origin: United States",
+    //            [
+    //                ["Age Adj Rate", "Rate"]
+    //            ]
+    //        ],
+
+    //        ["State Age-adjusted Death Rates‡ for Drug Poisoning by Year: United States",
+    //            [
+    //                ["Alcl", "Aucl", "Deaths", "Se"]
+    //            ]
+    //        ],
+
+    //        ["Age-adjusted Death Rates‡ for Drug Poisoning by State",
+    //            [
+    //                ["Alcl", "Aucl", "Number of Deaths"]
+    //            ]
+    //        ]
+    //    ];
+
+    let columnsOld = columns;
+    columns = [];
+
+    for (let i=0; i < colOrder.length; i++) {
+        columns.push(columnsOld[colOrder[i]]);
+    }
+
+    columns.forEach(function (column)
+    {
+
+        if (EXCLUDED_COLUMNS.indexOf(column) != -1)
+        {
+            return;
+        }
+
+        if ((column == 'DAY(Week-ending Date)') || (column == 'MDY(Week-ending Date)')) {
+            displayColumn = 'Week-ending Date';
+        } else {
+            displayColumn = column;
+        }
+
+        table += "<th scope='col'>" + displayColumn + "</th>";
+    });
+
+    table += "</tr></thead><tbody>";
+
+    //Place data on each row and col
+    data.forEach(function (row)
+    {
+
+        columns.forEach(function (column)
+        {
+
+            if (EXCLUDED_COLUMNS.indexOf(column) != -1)
+            {
+                return;
+            }
+
+            if (row[column].toString() != "Null")
+            {
+                table += "<td>" + row[column].toString() + "</td>";
+            }
+            else
+            {
+                table += "<td></td>";
+            }
+
+        });
+
+        table += "</tr>";
+
+
+
+    });
+
+    table += "</tbody></table>";
+
+    return table;
+}
+/* End Raw JS */

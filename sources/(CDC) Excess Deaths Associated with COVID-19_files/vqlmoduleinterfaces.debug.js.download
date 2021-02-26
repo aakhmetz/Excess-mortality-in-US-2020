@@ -1,0 +1,305 @@
+/*! BEGIN ModuleInterfaces */
+
+(function() {
+  'dont use strict';
+  var $asm = {};
+  global.tab = global.tab || {};
+  ss.initAssembly($asm, 'vqlmoduleinterfaces');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.DataTab.DataTabNotificationHandlers
+  var $tab_DataTabNotificationHandlers = global.tab.DataTabNotificationHandlers = ss.mkType($asm, 'tab.DataTabNotificationHandlers', function() {
+    this.showJoinAreaHandler = null;
+    this.updateDataPrepHandler = null;
+    this.updateJoinAreaHandler = null;
+  });
+  ////////////////////////////////////////////////////////////////////////////////
+  // ExtensionsApi.ExtensionServerContext
+  var $tab_ExtensionServerContext = global.tab.ExtensionServerContext = ss.mkType($asm, 'tab.ExtensionServerContext', function() {
+    this.isAuthoring = false;
+    this.isPublic = false;
+    this.isSaas = false;
+    this.isOfficialRelease = false;
+  });
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.Story.FlipboardNavigatorTemplate
+  var $tab_FlipboardNavigatorTemplate = global.tab.FlipboardNavigatorTemplate = ss.mkType($asm, 'tab.FlipboardNavigatorTemplate', function() {
+    this.previous = null;
+    this.scroller = null;
+    this.next = null;
+    this.previousArrow = null;
+    this.nextArrow = null;
+    spiff.Template.call(this, $($tab_FlipboardNavigatorTemplate.$htmlTemplate));
+    this.previous = this.getElementBySelector('.tabFlipboardNavPrevious');
+    this.scroller = this.getElementBySelector('.tabFlipboardNavScroller');
+    this.next = this.getElementBySelector('.tabFlipboardNavNext');
+    this.previousArrow = this.getElementBySelector('.tabStoryLeftArrow');
+    this.nextArrow = this.getElementBySelector('.tabStoryRightArrow');
+  });
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.VizZone.HitResultObjectType
+  var $tab_HitResultObjectType = global.tab.HitResultObjectType = ss.mkEnum($asm, 'tab.HitResultObjectType', { none: 0, misc: 1, annotation: 2, trendLine: 3, referenceLine: 4, referenceLineLabel: 5, semanticModelRefLine: 6, mark: 7, markLabel: 8 });
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IAliasDialogModule
+  var $tab_IAliasDialogModule = global.tab.IAliasDialogModule = ss.mkType($asm, 'tab.IAliasDialogModule');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.StoryAuthoring.IAuthoringStoryboardView
+  var $tab_IAuthoringStoryboardView = global.tab.IAuthoringStoryboardView = ss.mkType($asm, 'tab.IAuthoringStoryboardView');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.StoryAuthoring.IAuthoringStoryboardViewModel
+  var $tab_IAuthoringStoryboardViewModel = global.tab.IAuthoringStoryboardViewModel = ss.mkType($asm, 'tab.IAuthoringStoryboardViewModel');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.ResizeHeadersModule.IAxisResizerManager
+  var $tab_IAxisResizerManager = global.tab.IAxisResizerManager = ss.mkType($asm, 'tab.IAxisResizerManager');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IBinDialogModule
+  var $tab_IBinDialogModule = global.tab.IBinDialogModule = ss.mkType($asm, 'tab.IBinDialogModule');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.ResizeHeadersModule.ICellResizerManager
+  var $tab_ICellResizerManager = global.tab.ICellResizerManager = ss.mkType($asm, 'tab.ICellResizerManager');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.ResizeHeadersModule.ICellResizerManagerViewModel
+  var $tab_ICellResizerManagerViewModel = global.tab.ICellResizerManagerViewModel = ss.mkType($asm, 'tab.ICellResizerManagerViewModel');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.ICertificationMarkFactory
+  var $tab_ICertificationMarkFactory = global.tab.ICertificationMarkFactory = ss.mkType($asm, 'tab.ICertificationMarkFactory');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.ICommentingFactory
+  var $tab_ICommentingFactory = global.tab.ICommentingFactory = ss.mkType($asm, 'tab.ICommentingFactory');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.ICommentingModuleViewModel
+  var $tab_ICommentingModuleViewModel = global.tab.ICommentingModuleViewModel = ss.mkType($asm, 'tab.ICommentingModuleViewModel');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IConnectionDetailModel
+  var $tab_IConnectionDetailModel = global.tab.IConnectionDetailModel = ss.mkType($asm, 'tab.IConnectionDetailModel');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IConnectionDialogModule
+  var $tab_IConnectionDialogModule = global.tab.IConnectionDialogModule = ss.mkType($asm, 'tab.IConnectionDialogModule');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IConnectPanePluginTableauServerFactory
+  var $tab_IConnectPanePluginTableauServerFactory = global.tab.IConnectPanePluginTableauServerFactory = ss.mkType($asm, 'tab.IConnectPanePluginTableauServerFactory');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IDataAlertsPanelFactory
+  var $tab_IDataAlertsPanelFactory = global.tab.IDataAlertsPanelFactory = ss.mkType($asm, 'tab.IDataAlertsPanelFactory');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IDataAlertsPanelModuleViewModel
+  var $tab_IDataAlertsPanelModuleViewModel = global.tab.IDataAlertsPanelModuleViewModel = ss.mkType($asm, 'tab.IDataAlertsPanelModuleViewModel');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IDataCatalogClientComponentsFactory
+  var $tab_IDataCatalogClientComponentsFactory = global.tab.IDataCatalogClientComponentsFactory = ss.mkType($asm, 'tab.IDataCatalogClientComponentsFactory');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IDataConnectionModule
+  var $tab_IDataConnectionModule = global.tab.IDataConnectionModule = ss.mkType($asm, 'tab.IDataConnectionModule');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IDataConnectionPromptView<TViewModel>
+  var $tab_IDataConnectionPromptView$1 = global.tab.IDataConnectionPromptView$1 = ss.mkType($asm, 'tab.IDataConnectionPromptView$1', function(TViewModel) {
+    var $type = ss.registerGenericInterfaceInstance($tab_IDataConnectionPromptView$1, [TViewModel], {}, function() {
+      return [ss.makeGenericType(tab.IView$1, [TViewModel]), ss.IDisposable, tab.IAppendableView];
+    });
+    ss.setMetadata($type, { variance: [1] });
+    return $type;
+  });
+  ss.initGenericInterface($tab_IDataConnectionPromptView$1, 1);
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IDataConnectionPromptViewModel
+  var $tab_IDataConnectionPromptViewModel = global.tab.IDataConnectionPromptViewModel = ss.mkType($asm, 'tab.IDataConnectionPromptViewModel');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.DataTab.IDataTabIsolatedModule
+  var $tab_IDataTabIsolatedModule = global.tab.IDataTabIsolatedModule = ss.mkType($asm, 'tab.IDataTabIsolatedModule');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.DataTab.IDataTabModule
+  var $tab_IDataTabModule = global.tab.IDataTabModule = ss.mkType($asm, 'tab.IDataTabModule');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IDebugToolsModule
+  var $tab_IDebugToolsModule = global.tab.IDebugToolsModule = ss.mkType($asm, 'tab.IDebugToolsModule');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IDeviceLayoutSelectorModule
+  var $tab_IDeviceLayoutSelectorModule = global.tab.IDeviceLayoutSelectorModule = ss.mkType($asm, 'tab.IDeviceLayoutSelectorModule');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IDownloadAsVersionDialogModule
+  var $tab_IDownloadAsVersionDialogModule = global.tab.IDownloadAsVersionDialogModule = ss.mkType($asm, 'tab.IDownloadAsVersionDialogModule');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IDownloadDialogModule
+  var $tab_IDownloadDialogModule = global.tab.IDownloadDialogModule = ss.mkType($asm, 'tab.IDownloadDialogModule');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.FileUploadModule.IFileUploadModule
+  var $tab_IFileUploadModule = global.tab.IFileUploadModule = ss.mkType($asm, 'tab.IFileUploadModule');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.Story.IFlipboardNavigatorView
+  var $tab_IFlipboardNavigatorView = global.tab.IFlipboardNavigatorView = ss.mkType($asm, 'tab.IFlipboardNavigatorView');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.Story.IFlipboardNavigatorViewModel
+  var $tab_IFlipboardNavigatorViewModel = global.tab.IFlipboardNavigatorViewModel = ss.mkType($asm, 'tab.IFlipboardNavigatorViewModel');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.Api.IFrelardServerBootstrapModule
+  var $tab_IFrelardServerBootstrapModule = global.tab.IFrelardServerBootstrapModule = ss.mkType($asm, 'tab.IFrelardServerBootstrapModule');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IGroupDialogModule
+  var $tab_IGroupDialogModule = global.tab.IGroupDialogModule = ss.mkType($asm, 'tab.IGroupDialogModule');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.ResizeHeadersModule.IHeaderResizerManager
+  var $tab_IHeaderResizerManager = global.tab.IHeaderResizerManager = ss.mkType($asm, 'tab.IHeaderResizerManager');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.ResizeHeadersModule.IHeaderResizerManagerViewModel
+  var $tab_IHeaderResizerManagerViewModel = global.tab.IHeaderResizerManagerViewModel = ss.mkType($asm, 'tab.IHeaderResizerManagerViewModel');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.VizZone.IHitTestResult
+  var $tab_IHitTestResult = global.tab.IHitTestResult = ss.mkType($asm, 'tab.IHitTestResult');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IPaneContent
+  var $tab_IPaneContent = global.tab.IPaneContent = ss.mkType($asm, 'tab.IPaneContent');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.VizZone.IPaneTableView
+  var $tab_IPaneTableView = global.tab.IPaneTableView = ss.mkType($asm, 'tab.IPaneTableView');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.VizZone.IPaneTableViewModel
+  var $tab_IPaneTableViewModel = global.tab.IPaneTableViewModel = ss.mkType($asm, 'tab.IPaneTableViewModel');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IPdfExportDialogModule
+  var $tab_IPdfExportDialogModule = global.tab.IPdfExportDialogModule = ss.mkType($asm, 'tab.IPdfExportDialogModule');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IResizeHeadersModule
+  var $tab_IResizeHeadersModule = global.tab.IResizeHeadersModule = ss.mkType($asm, 'tab.IResizeHeadersModule');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.ResizeHeadersModule.IResizerViewModel
+  var $tab_IResizerViewModel = global.tab.IResizerViewModel = ss.mkType($asm, 'tab.IResizerViewModel');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.RichTextAuthoring.IRichTextAuthoringModule
+  var $tab_IRichTextAuthoringModule = global.tab.IRichTextAuthoringModule = ss.mkType($asm, 'tab.IRichTextAuthoringModule');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.ISaveController
+  var $tab_ISaveController = global.tab.ISaveController = ss.mkType($asm, 'tab.ISaveController');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.ISavingModule
+  var $tab_ISavingModule = global.tab.ISavingModule = ss.mkType($asm, 'tab.ISavingModule');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.ISelfServiceSchedulesModule
+  var $tab_ISelfServiceSchedulesModule = global.tab.ISelfServiceSchedulesModule = ss.mkType($asm, 'tab.ISelfServiceSchedulesModule');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IShareDialogFactory
+  var $tab_IShareDialogFactory = global.tab.IShareDialogFactory = ss.mkType($asm, 'tab.IShareDialogFactory');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IShareDialogViewModel
+  var $tab_IShareDialogViewModel = global.tab.IShareDialogViewModel = ss.mkType($asm, 'tab.IShareDialogViewModel');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.ISharedWidgetsDataGrid
+  var $tab_ISharedWidgetsDataGrid = global.tab.ISharedWidgetsDataGrid = ss.mkType($asm, 'tab.ISharedWidgetsDataGrid');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.ISharedWidgetsPlayground
+  var $tab_ISharedWidgetsPlayground = global.tab.ISharedWidgetsPlayground = ss.mkType($asm, 'tab.ISharedWidgetsPlayground');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IStoryAuthoringModule
+  var $tab_IStoryAuthoringModule = global.tab.IStoryAuthoringModule = ss.mkType($asm, 'tab.IStoryAuthoringModule');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.StoryAuthoring.IStoryContentPaneViewModel
+  var $tab_IStoryContentPaneViewModel = global.tab.IStoryContentPaneViewModel = ss.mkType($asm, 'tab.IStoryContentPaneViewModel');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.StoryAuthoring.IStoryLayoutPaneViewModel
+  var $tab_IStoryLayoutPaneViewModel = global.tab.IStoryLayoutPaneViewModel = ss.mkType($asm, 'tab.IStoryLayoutPaneViewModel');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IStoryModule
+  var $tab_IStoryModule = global.tab.IStoryModule = ss.mkType($asm, 'tab.IStoryModule');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.Story.IStoryPointCaptionViewModel
+  var $tab_IStoryPointCaptionViewModel = global.tab.IStoryPointCaptionViewModel = ss.mkType($asm, 'tab.IStoryPointCaptionViewModel');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.ITrendLineDialogModule
+  var $tab_ITrendLineDialogModule = global.tab.ITrendLineDialogModule = ss.mkType($asm, 'tab.ITrendLineDialogModule');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.VizZone.IViewController
+  var $tab_IViewController = global.tab.IViewController = ss.mkType($asm, 'tab.IViewController');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.ViewUnderlyingData.IViewUnderlyingDataTableModule
+  var $tab_IViewUnderlyingDataTableModule = global.tab.IViewUnderlyingDataTableModule = ss.mkType($asm, 'tab.IViewUnderlyingDataTableModule', function() {
+  }, { showDialog: null });
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IVizClientLineagePanelViewModel
+  var $tab_IVizClientLineagePanelViewModel = global.tab.IVizClientLineagePanelViewModel = ss.mkType($asm, 'tab.IVizClientLineagePanelViewModel');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IVizClientMetricsPanelViewModel
+  var $tab_IVizClientMetricsPanelViewModel = global.tab.IVizClientMetricsPanelViewModel = ss.mkType($asm, 'tab.IVizClientMetricsPanelViewModel');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.VizZone.IVizHitInfo
+  var $tab_IVizHitInfo = global.tab.IVizHitInfo = ss.mkType($asm, 'tab.IVizHitInfo');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.VizZone.IVizHitTestDebouncer
+  var $tab_IVizHitTestDebouncer = global.tab.IVizHitTestDebouncer = ss.mkType($asm, 'tab.IVizHitTestDebouncer');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IVizportalWebclientApiFactory
+  var $tab_IVizportalWebclientApiFactory = global.tab.IVizportalWebclientApiFactory = ss.mkType($asm, 'tab.IVizportalWebclientApiFactory', function() {
+  });
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.VizZone.IVizZoneModule
+  var $tab_IVizZoneModule = global.tab.IVizZoneModule = ss.mkType($asm, 'tab.IVizZoneModule');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.ModuleInterfaces.IZoneViewModel
+  var $tab_IZoneViewModel = global.tab.IZoneViewModel = ss.mkType($asm, 'tab.IZoneViewModel');
+  ss.initClass($tab_DataTabNotificationHandlers);
+  ss.initClass($tab_ExtensionServerContext);
+  ss.initClass($tab_FlipboardNavigatorTemplate, spiff.Template, [ss.IDisposable]);
+  ss.initInterface($tab_IAliasDialogModule, { showDialog: null });
+  ss.initInterface($tab_IAuthoringStoryboardView, { addToDom$1: null }, [ss.makeGenericType(tab.IView$1, [$tab_IAuthoringStoryboardViewModel]), ss.IDisposable, tab.IAppendableView]);
+  ss.initInterface($tab_IAuthoringStoryboardViewModel, { get_leftPanelContentPaneViewModel: null, get_leftPanelLayoutPaneViewModel: null }, [tab.IViewModel, ss.IDisposable]);
+  ss.initInterface($tab_IAxisResizerManager, { setAxisResizers: null });
+  ss.initInterface($tab_IBinDialogModule, { showDialog: null });
+  ss.initInterface($tab_ICellResizerManager, { handleCellResizerUpdate: null, scrollY: null, scrollX: null, scrollYWithTimeout: null, scrollXWithTimeout: null });
+  ss.initInterface($tab_ICellResizerManagerViewModel, { add_updateCellResizerViews: null, remove_updateCellResizerViews: null, get_resizeInfo: null, get_cellWidthResizerVM: null, get_cellHeightResizerVM: null });
+  ss.initInterface($tab_ICertificationMarkFactory, { createCertificationMark: null });
+  ss.initInterface($tab_ICommentingFactory, { createCommentingModuleViewModel: null });
+  ss.initInterface($tab_ICommentingModuleViewModel, { get_closeCommentingDrawer: null, set_closeCommentingDrawer: null, get_loadDrawerFonts: null, set_loadDrawerFonts: null, get_showNotification: null, set_showNotification: null, updateForSheet: null }, [spiff.IContent]);
+  ss.initInterface($tab_IConnectionDetailModel, {});
+  ss.initInterface($tab_IConnectionDialogModule, { showCreateConnectionDialog: null, showCreateConnectionDialogForPreselectedDatabase: null, showCreateConnectionDialogForPreselectedTable: null, showCreateConnectionDialogForEmptyWorkbook: null, showReplaceFileDialog: null, showEditConnectionDialog: null, uploadDroppedFiles: null, showPublishedConnectionDialog: null, showSignInDialog: null, showExtractInProgressDialog: null });
+  ss.initInterface($tab_IConnectPanePluginTableauServerFactory, {});
+  ss.initInterface($tab_IDataAlertsPanelFactory, { createDataAlertsPanelModuleViewModel: null });
+  ss.initInterface($tab_IDataAlertsPanelModuleViewModel, {}, [spiff.IContent]);
+  ss.initInterface($tab_IDataCatalogClientComponentsFactory, { createVizClientLineagePanelViewModel: null });
+  ss.initInterface($tab_IDataConnectionModule, { createDataConnectionPromptViewModel: null, createDataConnectionPromptView: null });
+  ss.initInterface($tab_IDataConnectionPromptViewModel, { get_promptUpdated: null, set_promptUpdated: null }, [tab.IViewModel, ss.IDisposable]);
+  ss.initInterface($tab_IDataTabIsolatedModule, {});
+  ss.initInterface($tab_IDataTabModule, { showDataTab: null, hideDataTab: null, activateExtract: null });
+  ss.initInterface($tab_IDebugToolsModule, { initTools: null, createDebugToolsMenu: null });
+  ss.initInterface($tab_IDeviceLayoutSelectorModule, { buildDialogContent: null });
+  ss.initInterface($tab_IDownloadAsVersionDialogModule, { showDownloadAsVersionDialog: null });
+  ss.initInterface($tab_IDownloadDialogModule, { buildDialogContent: null });
+  ss.initInterface($tab_IFileUploadModule, { uploadFiles: null, copyTempFileToSessionStorage: null });
+  ss.initInterface($tab_IFlipboardNavigatorView, { get_dom: null, get_domRoot: null }, [ss.makeGenericType(tab.IView$1, [$tab_IFlipboardNavigatorViewModel]), ss.IDisposable, tab.IAppendableView]);
+  ss.initInterface($tab_IFlipboardNavigatorViewModel, { add_zoneResized: null, remove_zoneResized: null, add_activePointUpdated: null, remove_activePointUpdated: null, add_remoteUpdateComplete: null, remove_remoteUpdateComplete: null, add_flipboardNavigatorUpdated: null, remove_flipboardNavigatorUpdated: null, add_findParentScroller: null, remove_findParentScroller: null, get_currentPointIndex: null, get_numberOfPoints: null, get_storyPointHeight: null, get_storyPointWidth: null, get_previousDisabled: null, get_nextDisabled: null, get_showArrows: null, get_captions: null, get_useDarkIcons: null, get_scrollBarStyle: null, get_navType: null, get_currentStoryPointId: null, closeUberMenu: null, clickNext: null, clickPrevious: null }, [tab.IViewModel, ss.IDisposable]);
+  ss.initInterface($tab_IFrelardServerBootstrapModule, { createApiDispatcher: null });
+  ss.initInterface($tab_IGroupDialogModule, { showGroupDialog: null });
+  ss.initInterface($tab_IHeaderResizerManager, { handleResizerUpdate: null });
+  ss.initInterface($tab_IHeaderResizerManagerViewModel, { add_updateResizerViews: null, remove_updateResizerViews: null, get_resizeInfo: null, get_rowHeaderResizerVMs: null, get_columnHeaderResizerVMs: null, get_totalColumnHeadersHeight: null }, [tab.IViewModel, ss.IDisposable]);
+  ss.initInterface($tab_IHitTestResult, { get_hitObjectType: null, get_id: null });
+  ss.initInterface($tab_IPaneContent, { get_title: null, get_id: null, get_contentViewType: null, get_contentViewModel: null, get_additionalContentViewClass: null }, [tab.IViewModel, ss.IDisposable]);
+  ss.initInterface($tab_IPaneTableView, { get_scrollPosition: null, get_vizHitTestDebouncer: null, doTiledViewerRefreshImages: null }, [ss.makeGenericType(tab.IView$1, [$tab_IPaneTableViewModel]), ss.IDisposable, tab.IAppendableView]);
+  ss.initInterface($tab_IPaneTableViewModel, { add_differentMarkBrushing: null, remove_differentMarkBrushing: null, add_differentMarkSelection: null, remove_differentMarkSelection: null, get_visualModel: null, get_sheetId: null, get_viewController: null, set_viewController: null }, [tab.IViewModel, ss.IDisposable]);
+  ss.initInterface($tab_IPdfExportDialogModule, { showExportPdfDialog: null });
+  ss.initInterface($tab_IResizeHeadersModule, { newHeaderResizerManagerViewModel: null, newHeaderResizerManager: null, newAxisResizerManager: null, newCellResizerManagerViewModel: null, newCellResizerManager: null });
+  ss.initInterface($tab_IResizerViewModel, { get_visualID: null, get_resizerOffset: null, get_resizerLength: null, get_isXResizer: null, get_resizerMinimumOffset: null, get_resizerMaximumOffset: null, get_cssClassName: null, sendResizeCommand: null }, [tab.IViewModel, ss.IDisposable]);
+  ss.initInterface($tab_IRichTextAuthoringModule, { showRichTextEditorDialog: null });
+  ss.initInterface($tab_ISaveController, { saveWorkbook: null, saveWorkbookAs: null, checkUnusedFiles: null, get_hasUnusedFiles: null });
+  ss.initInterface($tab_ISavingModule, { getSaveControllerInstance: null });
+  ss.initInterface($tab_ISelfServiceSchedulesModule, { get_defaultRecurrence: null, get_selfServiceSchedulePaneComponent: null, createSubscriptionWithSelfServiceSchedule: null, createSubscriptionsWithSelfServiceSchedule: null });
+  ss.initInterface($tab_IShareDialogFactory, { buildDialogContent: null });
+  ss.initInterface($tab_IShareDialogViewModel, { get_showNotification: null, set_showNotification: null, get_showErrorNotification: null, set_showErrorNotification: null });
+  ss.initInterface($tab_ISharedWidgetsDataGrid, { createGrid: null, createArrayRowStore: null, createGridSelection: null });
+  ss.initInterface($tab_ISharedWidgetsPlayground, { show: null });
+  ss.initInterface($tab_IStoryModule, { newFlipboardNavigatorViewModel: null, newFlipboardViewModel: null, newFlipboardNavigatorView: null, newFlipboardView: null, insertStoryPoint: null, replaceStoryPoint: null, fireCloseStoryUberMenu: null, fireShowUpdateToast: null });
+  ss.initInterface($tab_IStoryAuthoringModule, { newAuthoringStoryboardViewModel: null }, [$tab_IStoryModule]);
+  ss.initInterface($tab_IStoryContentPaneViewModel, {}, [$tab_IPaneContent, tab.IViewModel, ss.IDisposable]);
+  ss.initInterface($tab_IStoryLayoutPaneViewModel, {}, [$tab_IPaneContent, tab.IViewModel, ss.IDisposable]);
+  ss.initInterface($tab_IStoryPointCaptionViewModel, { add_pointCaptured: null, remove_pointCaptured: null, get_caption: null, get_isCurrentPoint: null, get_isCaptured: null, get_shouldBeAdded: null, get_storyPointId: null, get_storyPointIndex: null, get_selectedStoryPointStyle: null, get_unselectedStoryPointStyle: null, clickStoryPoint: null, revertStoryPoint: null });
+  ss.initInterface($tab_ITrendLineDialogModule, { showDialog: null });
+  ss.initInterface($tab_IViewController, { get_viewSession: null, get_sheetName: null, get_cacheVersion: null, setTiledViewer: null, incrementCacheVersion: null }, [ss.IDisposable]);
+  ss.initClass($tab_IViewUnderlyingDataTableModule);
+  ss.initInterface($tab_IVizClientLineagePanelViewModel, {}, [spiff.IContent]);
+  ss.initInterface($tab_IVizClientMetricsPanelViewModel, {}, [spiff.IContent]);
+  ss.initInterface($tab_IVizHitInfo, { get_result: null, get_visualId: null, get_sheetId: null, get_paneColumnIndex: null, get_paneRowIndex: null, get_paneLayerIndex: null, get_pageCoordinates: null });
+  ss.initInterface($tab_IVizHitTestDebouncer, { add_updated: null, remove_updated: null, get_current: null, getAsync: null, isWithinLastHitTestDistance: null, getLastHitTestDistance: null, update: null }, [ss.IDisposable]);
+  ss.initClass($tab_IVizportalWebclientApiFactory);
+  ss.initInterface($tab_IVizZoneModule, { createPaneTableView: null, createPaneTableViewModel: null, addVizDragHandler: null, addAsyncVizDragHandler: null, addVizDragApprover: null, computeVizScrollCapabilities: null });
+  ss.initInterface($tab_IZoneViewModel, { add_resizeZone: null, remove_resizeZone: null, add_zoneResized: null, remove_zoneResized: null, add_validStateChanged: null, remove_validStateChanged: null, get_width: null, get_height: null, get_contentWidth: null, get_contentHeight: null, get_contentContainerStyle: null, get_titleSize: null, get_zoneId: null, get_hasTitle: null, get_associatedSheet: null, get_valid: null, get_model: null, forceZoneValidState: null });
+  ss.setMetadata($tab_IDataConnectionPromptView$1, { variance: [1] });
+  (function() {
+    $tab_FlipboardNavigatorTemplate.$htmlTemplate = "<div class='" + 'tabFlipboardNav' + "'>" + "<span class='tabFlipboardNavPrevious'><div class='tabStoryLeftArrow'></div></span>" + "<span class='tabFlipboardNavScroller'></span>" + "<span class='tabFlipboardNavNext'><div class='tabStoryRightArrow'></div></span>" + '</div>';
+  })();
+})();
+// END ModuleInterfaces

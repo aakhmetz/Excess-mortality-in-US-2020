@@ -1,0 +1,2099 @@
+jurisdiction,number_of_deaths,year,week,last_week
+Alabama,1077,2020,1,39
+Alabama,1124,2020,2,39
+Alabama,1038,2020,3,39
+Alabama,1053,2020,4,39
+Alabama,1024,2020,5,39
+Alabama,1117,2020,6,39
+Alabama,1093,2020,7,39
+Alabama,1096,2020,8,39
+Alabama,1161,2020,9,39
+Alabama,1053,2020,10,39
+Alabama,1086,2020,11,39
+Alabama,1056,2020,12,39
+Alabama,1070,2020,13,39
+Alabama,1153,2020,14,39
+Alabama,1131,2020,15,39
+Alabama,1138,2020,16,39
+Alabama,1133,2020,17,39
+Alabama,1146,2020,18,39
+Alabama,1161,2020,19,39
+Alabama,1141,2020,20,39
+Alabama,1143,2020,21,39
+Alabama,1098,2020,22,39
+Alabama,1158,2020,23,39
+Alabama,1130,2020,24,39
+Alabama,1077,2020,25,39
+Alabama,1136,2020,26,39
+Alabama,1183,2020,27,39
+Alabama,1242,2020,28,39
+Alabama,1262,2020,29,39
+Alabama,1304,2020,30,39
+Alabama,1333,2020,31,39
+Alabama,1320,2020,32,39
+Alabama,1248,2020,33,39
+Alabama,1215,2020,34,39
+Alabama,1091,2020,35,39
+Alabama,1035,2020,36,39
+Alabama,955,2020,37,39
+Alabama,701,2020,38,39
+Alabama,234,2020,39,39
+Alaska,89,2020,1,39
+Alaska,105,2020,2,39
+Alaska,99,2020,3,39
+Alaska,97,2020,4,39
+Alaska,85,2020,5,39
+Alaska,95,2020,6,39
+Alaska,89,2020,7,39
+Alaska,83,2020,8,39
+Alaska,84,2020,9,39
+Alaska,79,2020,10,39
+Alaska,92,2020,11,39
+Alaska,69,2020,12,39
+Alaska,86,2020,13,39
+Alaska,98,2020,14,39
+Alaska,83,2020,15,39
+Alaska,80,2020,16,39
+Alaska,62,2020,17,39
+Alaska,87,2020,18,39
+Alaska,89,2020,19,39
+Alaska,82,2020,20,39
+Alaska,80,2020,21,39
+Alaska,97,2020,22,39
+Alaska,77,2020,23,39
+Alaska,88,2020,24,39
+Alaska,88,2020,25,39
+Alaska,86,2020,26,39
+Alaska,82,2020,27,39
+Alaska,96,2020,28,39
+Alaska,85,2020,29,39
+Alaska,84,2020,30,39
+Alaska,108,2020,31,39
+Alaska,93,2020,32,39
+Alaska,62,2020,33,39
+Alaska,86,2020,34,39
+Alaska,71,2020,35,39
+Alaska,67,2020,36,39
+Alaska,35,2020,37,39
+Alaska,29,2020,38,39
+Alaska,,2020,39,39
+Arizona,1299,2020,1,39
+Arizona,1390,2020,2,39
+Arizona,1315,2020,3,39
+Arizona,1275,2020,4,39
+Arizona,1265,2020,5,39
+Arizona,1263,2020,6,39
+Arizona,1311,2020,7,39
+Arizona,1341,2020,8,39
+Arizona,1352,2020,9,39
+Arizona,1379,2020,10,39
+Arizona,1349,2020,11,39
+Arizona,1289,2020,12,39
+Arizona,1323,2020,13,39
+Arizona,1356,2020,14,39
+Arizona,1402,2020,15,39
+Arizona,1316,2020,16,39
+Arizona,1383,2020,17,39
+Arizona,1398,2020,18,39
+Arizona,1427,2020,19,39
+Arizona,1305,2020,20,39
+Arizona,1289,2020,21,39
+Arizona,1310,2020,22,39
+Arizona,1398,2020,23,39
+Arizona,1461,2020,24,39
+Arizona,1546,2020,25,39
+Arizona,1613,2020,26,39
+Arizona,1772,2020,27,39
+Arizona,1947,2020,28,39
+Arizona,1982,2020,29,39
+Arizona,1843,2020,30,39
+Arizona,1783,2020,31,39
+Arizona,1574,2020,32,39
+Arizona,1507,2020,33,39
+Arizona,1475,2020,34,39
+Arizona,1425,2020,35,39
+Arizona,1244,2020,36,39
+Arizona,1212,2020,37,39
+Arizona,1043,2020,38,39
+Arizona,444,2020,39,39
+Arkansas,672,2020,1,39
+Arkansas,685,2020,2,39
+Arkansas,658,2020,3,39
+Arkansas,616,2020,4,39
+Arkansas,681,2020,5,39
+Arkansas,672,2020,6,39
+Arkansas,688,2020,7,39
+Arkansas,695,2020,8,39
+Arkansas,656,2020,9,39
+Arkansas,696,2020,10,39
+Arkansas,628,2020,11,39
+Arkansas,636,2020,12,39
+Arkansas,640,2020,13,39
+Arkansas,606,2020,14,39
+Arkansas,634,2020,15,39
+Arkansas,637,2020,16,39
+Arkansas,614,2020,17,39
+Arkansas,630,2020,18,39
+Arkansas,661,2020,19,39
+Arkansas,582,2020,20,39
+Arkansas,641,2020,21,39
+Arkansas,610,2020,22,39
+Arkansas,647,2020,23,39
+Arkansas,650,2020,24,39
+Arkansas,704,2020,25,39
+Arkansas,663,2020,26,39
+Arkansas,684,2020,27,39
+Arkansas,658,2020,28,39
+Arkansas,689,2020,29,39
+Arkansas,709,2020,30,39
+Arkansas,735,2020,31,39
+Arkansas,721,2020,32,39
+Arkansas,756,2020,33,39
+Arkansas,723,2020,34,39
+Arkansas,717,2020,35,39
+Arkansas,665,2020,36,39
+Arkansas,657,2020,37,39
+Arkansas,529,2020,38,39
+Arkansas,262,2020,39,39
+California,5887,2020,1,39
+California,5870,2020,2,39
+California,5828,2020,3,39
+California,5827,2020,4,39
+California,5682,2020,5,39
+California,5912,2020,6,39
+California,5584,2020,7,39
+California,5796,2020,8,39
+California,5679,2020,9,39
+California,5731,2020,10,39
+California,5461,2020,11,39
+California,5676,2020,12,39
+California,5687,2020,13,39
+California,5978,2020,14,39
+California,6042,2020,15,39
+California,6126,2020,16,39
+California,5932,2020,17,39
+California,5737,2020,18,39
+California,5658,2020,19,39
+California,5679,2020,20,39
+California,5523,2020,21,39
+California,5582,2020,22,39
+California,5502,2020,23,39
+California,5545,2020,24,39
+California,5472,2020,25,39
+California,5672,2020,26,39
+California,5867,2020,27,39
+California,6004,2020,28,39
+California,6191,2020,29,39
+California,6203,2020,30,39
+California,6287,2020,31,39
+California,6248,2020,32,39
+California,6215,2020,33,39
+California,6364,2020,34,39
+California,5729,2020,35,39
+California,5450,2020,36,39
+California,5193,2020,37,39
+California,3840,2020,38,39
+California,1410,2020,39,39
+Colorado,854,2020,1,39
+Colorado,872,2020,2,39
+Colorado,848,2020,3,39
+Colorado,852,2020,4,39
+Colorado,792,2020,5,39
+Colorado,846,2020,6,39
+Colorado,807,2020,7,39
+Colorado,880,2020,8,39
+Colorado,842,2020,9,39
+Colorado,821,2020,10,39
+Colorado,822,2020,11,39
+Colorado,890,2020,12,39
+Colorado,859,2020,13,39
+Colorado,966,2020,14,39
+Colorado,1096,2020,15,39
+Colorado,1104,2020,16,39
+Colorado,1066,2020,17,39
+Colorado,996,2020,18,39
+Colorado,904,2020,19,39
+Colorado,883,2020,20,39
+Colorado,846,2020,21,39
+Colorado,833,2020,22,39
+Colorado,820,2020,23,39
+Colorado,812,2020,24,39
+Colorado,858,2020,25,39
+Colorado,876,2020,26,39
+Colorado,784,2020,27,39
+Colorado,813,2020,28,39
+Colorado,808,2020,29,39
+Colorado,831,2020,30,39
+Colorado,807,2020,31,39
+Colorado,838,2020,32,39
+Colorado,824,2020,33,39
+Colorado,853,2020,34,39
+Colorado,808,2020,35,39
+Colorado,722,2020,36,39
+Colorado,804,2020,37,39
+Colorado,635,2020,38,39
+Colorado,258,2020,39,39
+Connecticut,632,2020,1,39
+Connecticut,629,2020,2,39
+Connecticut,639,2020,3,39
+Connecticut,652,2020,4,39
+Connecticut,680,2020,5,39
+Connecticut,647,2020,6,39
+Connecticut,632,2020,7,39
+Connecticut,647,2020,8,39
+Connecticut,632,2020,9,39
+Connecticut,621,2020,10,39
+Connecticut,625,2020,11,39
+Connecticut,660,2020,12,39
+Connecticut,736,2020,13,39
+Connecticut,871,2020,14,39
+Connecticut,1248,2020,15,39
+Connecticut,1374,2020,16,39
+Connecticut,1327,2020,17,39
+Connecticut,1161,2020,18,39
+Connecticut,1047,2020,19,39
+Connecticut,944,2020,20,39
+Connecticut,813,2020,21,39
+Connecticut,746,2020,22,39
+Connecticut,658,2020,23,39
+Connecticut,625,2020,24,39
+Connecticut,569,2020,25,39
+Connecticut,587,2020,26,39
+Connecticut,538,2020,27,39
+Connecticut,598,2020,28,39
+Connecticut,556,2020,29,39
+Connecticut,568,2020,30,39
+Connecticut,512,2020,31,39
+Connecticut,467,2020,32,39
+Connecticut,442,2020,33,39
+Connecticut,354,2020,34,39
+Connecticut,289,2020,35,39
+Connecticut,70,2020,36,39
+Connecticut,10,2020,37,39
+Connecticut,,2020,38,39
+Delaware,199,2020,1,39
+Delaware,193,2020,2,39
+Delaware,190,2020,3,39
+Delaware,190,2020,4,39
+Delaware,183,2020,5,39
+Delaware,191,2020,6,39
+Delaware,202,2020,7,39
+Delaware,193,2020,8,39
+Delaware,163,2020,9,39
+Delaware,200,2020,10,39
+Delaware,189,2020,11,39
+Delaware,221,2020,12,39
+Delaware,188,2020,13,39
+Delaware,214,2020,14,39
+Delaware,219,2020,15,39
+Delaware,227,2020,16,39
+Delaware,285,2020,17,39
+Delaware,250,2020,18,39
+Delaware,269,2020,19,39
+Delaware,276,2020,20,39
+Delaware,221,2020,21,39
+Delaware,226,2020,22,39
+Delaware,180,2020,23,39
+Delaware,197,2020,24,39
+Delaware,157,2020,25,39
+Delaware,197,2020,26,39
+Delaware,196,2020,27,39
+Delaware,190,2020,28,39
+Delaware,187,2020,29,39
+Delaware,198,2020,30,39
+Delaware,189,2020,31,39
+Delaware,190,2020,32,39
+Delaware,178,2020,33,39
+Delaware,172,2020,34,39
+Delaware,160,2020,35,39
+Delaware,157,2020,36,39
+Delaware,120,2020,37,39
+Delaware,65,2020,38,39
+Delaware,10,2020,39,39
+District of Columbia,132,2020,1,39
+District of Columbia,128,2020,2,39
+District of Columbia,140,2020,3,39
+District of Columbia,131,2020,4,39
+District of Columbia,143,2020,5,39
+District of Columbia,131,2020,6,39
+District of Columbia,122,2020,7,39
+District of Columbia,104,2020,8,39
+District of Columbia,135,2020,9,39
+District of Columbia,118,2020,10,39
+District of Columbia,114,2020,11,39
+District of Columbia,129,2020,12,39
+District of Columbia,130,2020,13,39
+District of Columbia,156,2020,14,39
+District of Columbia,193,2020,15,39
+District of Columbia,202,2020,16,39
+District of Columbia,241,2020,17,39
+District of Columbia,215,2020,18,39
+District of Columbia,214,2020,19,39
+District of Columbia,185,2020,20,39
+District of Columbia,181,2020,21,39
+District of Columbia,168,2020,22,39
+District of Columbia,149,2020,23,39
+District of Columbia,147,2020,24,39
+District of Columbia,132,2020,25,39
+District of Columbia,128,2020,26,39
+District of Columbia,121,2020,27,39
+District of Columbia,138,2020,28,39
+District of Columbia,121,2020,29,39
+District of Columbia,124,2020,30,39
+District of Columbia,128,2020,31,39
+District of Columbia,113,2020,32,39
+District of Columbia,111,2020,33,39
+District of Columbia,101,2020,34,39
+District of Columbia,127,2020,35,39
+District of Columbia,121,2020,36,39
+District of Columbia,97,2020,37,39
+District of Columbia,56,2020,38,39
+District of Columbia,10,2020,39,39
+Florida,4341,2020,1,39
+Florida,4408,2020,2,39
+Florida,4384,2020,3,39
+Florida,4387,2020,4,39
+Florida,4419,2020,5,39
+Florida,4385,2020,6,39
+Florida,4359,2020,7,39
+Florida,4415,2020,8,39
+Florida,4398,2020,9,39
+Florida,4520,2020,10,39
+Florida,4435,2020,11,39
+Florida,4362,2020,12,39
+Florida,4461,2020,13,39
+Florida,4496,2020,14,39
+Florida,4545,2020,15,39
+Florida,4416,2020,16,39
+Florida,4553,2020,17,39
+Florida,4350,2020,18,39
+Florida,4407,2020,19,39
+Florida,4281,2020,20,39
+Florida,4360,2020,21,39
+Florida,4209,2020,22,39
+Florida,4262,2020,23,39
+Florida,4255,2020,24,39
+Florida,4404,2020,25,39
+Florida,4504,2020,26,39
+Florida,4723,2020,27,39
+Florida,5078,2020,28,39
+Florida,5503,2020,29,39
+Florida,5693,2020,30,39
+Florida,5766,2020,31,39
+Florida,5564,2020,32,39
+Florida,5472,2020,33,39
+Florida,5152,2020,34,39
+Florida,4934,2020,35,39
+Florida,4628,2020,36,39
+Florida,4194,2020,37,39
+Florida,3511,2020,38,39
+Florida,1321,2020,39,39
+Georgia,1799,2020,1,39
+Georgia,1798,2020,2,39
+Georgia,1739,2020,3,39
+Georgia,1823,2020,4,39
+Georgia,1789,2020,5,39
+Georgia,1775,2020,6,39
+Georgia,1753,2020,7,39
+Georgia,1740,2020,8,39
+Georgia,1852,2020,9,39
+Georgia,1746,2020,10,39
+Georgia,1778,2020,11,39
+Georgia,1765,2020,12,39
+Georgia,1872,2020,13,39
+Georgia,2022,2020,14,39
+Georgia,2023,2020,15,39
+Georgia,2011,2020,16,39
+Georgia,2024,2020,17,39
+Georgia,1962,2020,18,39
+Georgia,1975,2020,19,39
+Georgia,1940,2020,20,39
+Georgia,1885,2020,21,39
+Georgia,1754,2020,22,39
+Georgia,1745,2020,23,39
+Georgia,1705,2020,24,39
+Georgia,1724,2020,25,39
+Georgia,1764,2020,26,39
+Georgia,1829,2020,27,39
+Georgia,1907,2020,28,39
+Georgia,2086,2020,29,39
+Georgia,2074,2020,30,39
+Georgia,2065,2020,31,39
+Georgia,2055,2020,32,39
+Georgia,2090,2020,33,39
+Georgia,2029,2020,34,39
+Georgia,1834,2020,35,39
+Georgia,1616,2020,36,39
+Georgia,1411,2020,37,39
+Georgia,875,2020,38,39
+Georgia,268,2020,39,39
+Hawaii,241,2020,1,39
+Hawaii,241,2020,2,39
+Hawaii,214,2020,3,39
+Hawaii,242,2020,4,39
+Hawaii,242,2020,5,39
+Hawaii,235,2020,6,39
+Hawaii,281,2020,7,39
+Hawaii,249,2020,8,39
+Hawaii,237,2020,9,39
+Hawaii,239,2020,10,39
+Hawaii,243,2020,11,39
+Hawaii,212,2020,12,39
+Hawaii,235,2020,13,39
+Hawaii,234,2020,14,39
+Hawaii,221,2020,15,39
+Hawaii,211,2020,16,39
+Hawaii,200,2020,17,39
+Hawaii,222,2020,18,39
+Hawaii,210,2020,19,39
+Hawaii,230,2020,20,39
+Hawaii,208,2020,21,39
+Hawaii,200,2020,22,39
+Hawaii,217,2020,23,39
+Hawaii,203,2020,24,39
+Hawaii,244,2020,25,39
+Hawaii,234,2020,26,39
+Hawaii,206,2020,27,39
+Hawaii,224,2020,28,39
+Hawaii,204,2020,29,39
+Hawaii,218,2020,30,39
+Hawaii,217,2020,31,39
+Hawaii,229,2020,32,39
+Hawaii,220,2020,33,39
+Hawaii,242,2020,34,39
+Hawaii,251,2020,35,39
+Hawaii,227,2020,36,39
+Hawaii,256,2020,37,39
+Hawaii,185,2020,38,39
+Hawaii,71,2020,39,39
+Idaho,278,2020,1,39
+Idaho,292,2020,2,39
+Idaho,293,2020,3,39
+Idaho,275,2020,4,39
+Idaho,249,2020,5,39
+Idaho,292,2020,6,39
+Idaho,279,2020,7,39
+Idaho,318,2020,8,39
+Idaho,290,2020,9,39
+Idaho,278,2020,10,39
+Idaho,282,2020,11,39
+Idaho,308,2020,12,39
+Idaho,332,2020,13,39
+Idaho,271,2020,14,39
+Idaho,306,2020,15,39
+Idaho,283,2020,16,39
+Idaho,262,2020,17,39
+Idaho,252,2020,18,39
+Idaho,304,2020,19,39
+Idaho,269,2020,20,39
+Idaho,261,2020,21,39
+Idaho,279,2020,22,39
+Idaho,292,2020,23,39
+Idaho,287,2020,24,39
+Idaho,282,2020,25,39
+Idaho,296,2020,26,39
+Idaho,281,2020,27,39
+Idaho,287,2020,28,39
+Idaho,312,2020,29,39
+Idaho,328,2020,30,39
+Idaho,327,2020,31,39
+Idaho,311,2020,32,39
+Idaho,317,2020,33,39
+Idaho,359,2020,34,39
+Idaho,324,2020,35,39
+Idaho,340,2020,36,39
+Idaho,306,2020,37,39
+Idaho,254,2020,38,39
+Idaho,93,2020,39,39
+Illinois,2189,2020,1,39
+Illinois,2250,2020,2,39
+Illinois,2231,2020,3,39
+Illinois,2198,2020,4,39
+Illinois,2138,2020,5,39
+Illinois,2231,2020,6,39
+Illinois,2218,2020,7,39
+Illinois,2206,2020,8,39
+Illinois,2209,2020,9,39
+Illinois,2253,2020,10,39
+Illinois,2192,2020,11,39
+Illinois,2281,2020,12,39
+Illinois,2302,2020,13,39
+Illinois,2622,2020,14,39
+Illinois,2869,2020,15,39
+Illinois,2911,2020,16,39
+Illinois,3006,2020,17,39
+Illinois,2948,2020,18,39
+Illinois,2960,2020,19,39
+Illinois,2863,2020,20,39
+Illinois,2632,2020,21,39
+Illinois,2544,2020,22,39
+Illinois,2508,2020,23,39
+Illinois,2267,2020,24,39
+Illinois,2250,2020,25,39
+Illinois,2129,2020,26,39
+Illinois,2179,2020,27,39
+Illinois,2188,2020,28,39
+Illinois,2084,2020,29,39
+Illinois,2030,2020,30,39
+Illinois,2064,2020,31,39
+Illinois,2131,2020,32,39
+Illinois,2112,2020,33,39
+Illinois,2129,2020,34,39
+Illinois,2086,2020,35,39
+Illinois,2156,2020,36,39
+Illinois,2000,2020,37,39
+Illinois,1780,2020,38,39
+Illinois,1250,2020,39,39
+Indiana,1469,2020,1,39
+Indiana,1386,2020,2,39
+Indiana,1389,2020,3,39
+Indiana,1421,2020,4,39
+Indiana,1378,2020,5,39
+Indiana,1362,2020,6,39
+Indiana,1427,2020,7,39
+Indiana,1406,2020,8,39
+Indiana,1447,2020,9,39
+Indiana,1368,2020,10,39
+Indiana,1398,2020,11,39
+Indiana,1326,2020,12,39
+Indiana,1481,2020,13,39
+Indiana,1578,2020,14,39
+Indiana,1626,2020,15,39
+Indiana,1506,2020,16,39
+Indiana,1591,2020,17,39
+Indiana,1520,2020,18,39
+Indiana,1572,2020,19,39
+Indiana,1565,2020,20,39
+Indiana,1464,2020,21,39
+Indiana,1371,2020,22,39
+Indiana,1384,2020,23,39
+Indiana,1383,2020,24,39
+Indiana,1342,2020,25,39
+Indiana,1370,2020,26,39
+Indiana,1327,2020,27,39
+Indiana,1339,2020,28,39
+Indiana,1360,2020,29,39
+Indiana,1297,2020,30,39
+Indiana,1330,2020,31,39
+Indiana,1302,2020,32,39
+Indiana,1323,2020,33,39
+Indiana,1298,2020,34,39
+Indiana,1266,2020,35,39
+Indiana,1156,2020,36,39
+Indiana,1126,2020,37,39
+Indiana,978,2020,38,39
+Indiana,262,2020,39,39
+Iowa,664,2020,1,39
+Iowa,647,2020,2,39
+Iowa,620,2020,3,39
+Iowa,640,2020,4,39
+Iowa,615,2020,5,39
+Iowa,637,2020,6,39
+Iowa,600,2020,7,39
+Iowa,643,2020,8,39
+Iowa,642,2020,9,39
+Iowa,624,2020,10,39
+Iowa,636,2020,11,39
+Iowa,597,2020,12,39
+Iowa,593,2020,13,39
+Iowa,608,2020,14,39
+Iowa,596,2020,15,39
+Iowa,633,2020,16,39
+Iowa,585,2020,17,39
+Iowa,672,2020,18,39
+Iowa,698,2020,19,39
+Iowa,672,2020,20,39
+Iowa,617,2020,21,39
+Iowa,630,2020,22,39
+Iowa,596,2020,23,39
+Iowa,587,2020,24,39
+Iowa,570,2020,25,39
+Iowa,546,2020,26,39
+Iowa,590,2020,27,39
+Iowa,557,2020,28,39
+Iowa,594,2020,29,39
+Iowa,643,2020,30,39
+Iowa,633,2020,31,39
+Iowa,633,2020,32,39
+Iowa,645,2020,33,39
+Iowa,595,2020,34,39
+Iowa,650,2020,35,39
+Iowa,547,2020,36,39
+Iowa,543,2020,37,39
+Iowa,467,2020,38,39
+Iowa,232,2020,39,39
+Kansas,591,2020,1,39
+Kansas,560,2020,2,39
+Kansas,576,2020,3,39
+Kansas,572,2020,4,39
+Kansas,547,2020,5,39
+Kansas,503,2020,6,39
+Kansas,574,2020,7,39
+Kansas,559,2020,8,39
+Kansas,548,2020,9,39
+Kansas,574,2020,10,39
+Kansas,522,2020,11,39
+Kansas,514,2020,12,39
+Kansas,520,2020,13,39
+Kansas,547,2020,14,39
+Kansas,525,2020,15,39
+Kansas,546,2020,16,39
+Kansas,541,2020,17,39
+Kansas,523,2020,18,39
+Kansas,505,2020,19,39
+Kansas,529,2020,20,39
+Kansas,517,2020,21,39
+Kansas,506,2020,22,39
+Kansas,499,2020,23,39
+Kansas,514,2020,24,39
+Kansas,506,2020,25,39
+Kansas,521,2020,26,39
+Kansas,557,2020,27,39
+Kansas,503,2020,28,39
+Kansas,515,2020,29,39
+Kansas,538,2020,30,39
+Kansas,543,2020,31,39
+Kansas,593,2020,32,39
+Kansas,570,2020,33,39
+Kansas,508,2020,34,39
+Kansas,522,2020,35,39
+Kansas,539,2020,36,39
+Kansas,535,2020,37,39
+Kansas,454,2020,38,39
+Kansas,222,2020,39,39
+Kentucky,1093,2020,1,39
+Kentucky,1056,2020,2,39
+Kentucky,1040,2020,3,39
+Kentucky,941,2020,4,39
+Kentucky,977,2020,5,39
+Kentucky,955,2020,6,39
+Kentucky,954,2020,7,39
+Kentucky,991,2020,8,39
+Kentucky,1016,2020,9,39
+Kentucky,1004,2020,10,39
+Kentucky,1017,2020,11,39
+Kentucky,946,2020,12,39
+Kentucky,936,2020,13,39
+Kentucky,1045,2020,14,39
+Kentucky,1024,2020,15,39
+Kentucky,959,2020,16,39
+Kentucky,968,2020,17,39
+Kentucky,994,2020,18,39
+Kentucky,1002,2020,19,39
+Kentucky,991,2020,20,39
+Kentucky,991,2020,21,39
+Kentucky,985,2020,22,39
+Kentucky,910,2020,23,39
+Kentucky,988,2020,24,39
+Kentucky,959,2020,25,39
+Kentucky,930,2020,26,39
+Kentucky,978,2020,27,39
+Kentucky,1019,2020,28,39
+Kentucky,914,2020,29,39
+Kentucky,944,2020,30,39
+Kentucky,986,2020,31,39
+Kentucky,958,2020,32,39
+Kentucky,941,2020,33,39
+Kentucky,959,2020,34,39
+Kentucky,840,2020,35,39
+Kentucky,838,2020,36,39
+Kentucky,690,2020,37,39
+Kentucky,437,2020,38,39
+Kentucky,138,2020,39,39
+Louisiana,926,2020,1,39
+Louisiana,965,2020,2,39
+Louisiana,957,2020,3,39
+Louisiana,967,2020,4,39
+Louisiana,972,2020,5,39
+Louisiana,952,2020,6,39
+Louisiana,948,2020,7,39
+Louisiana,947,2020,8,39
+Louisiana,991,2020,9,39
+Louisiana,958,2020,10,39
+Louisiana,987,2020,11,39
+Louisiana,951,2020,12,39
+Louisiana,1224,2020,13,39
+Louisiana,1380,2020,14,39
+Louisiana,1522,2020,15,39
+Louisiana,1354,2020,16,39
+Louisiana,1242,2020,17,39
+Louisiana,1167,2020,18,39
+Louisiana,1123,2020,19,39
+Louisiana,1097,2020,20,39
+Louisiana,1048,2020,21,39
+Louisiana,1044,2020,22,39
+Louisiana,1004,2020,23,39
+Louisiana,940,2020,24,39
+Louisiana,987,2020,25,39
+Louisiana,984,2020,26,39
+Louisiana,963,2020,27,39
+Louisiana,1022,2020,28,39
+Louisiana,1103,2020,29,39
+Louisiana,1161,2020,30,39
+Louisiana,1127,2020,31,39
+Louisiana,1132,2020,32,39
+Louisiana,1040,2020,33,39
+Louisiana,942,2020,34,39
+Louisiana,847,2020,35,39
+Louisiana,784,2020,36,39
+Louisiana,596,2020,37,39
+Louisiana,365,2020,38,39
+Louisiana,63,2020,39,39
+Maine,320,2020,1,39
+Maine,318,2020,2,39
+Maine,295,2020,3,39
+Maine,308,2020,4,39
+Maine,288,2020,5,39
+Maine,316,2020,6,39
+Maine,329,2020,7,39
+Maine,299,2020,8,39
+Maine,292,2020,9,39
+Maine,313,2020,10,39
+Maine,301,2020,11,39
+Maine,277,2020,12,39
+Maine,279,2020,13,39
+Maine,300,2020,14,39
+Maine,304,2020,15,39
+Maine,310,2020,16,39
+Maine,285,2020,17,39
+Maine,277,2020,18,39
+Maine,293,2020,19,39
+Maine,256,2020,20,39
+Maine,267,2020,21,39
+Maine,302,2020,22,39
+Maine,255,2020,23,39
+Maine,254,2020,24,39
+Maine,275,2020,25,39
+Maine,299,2020,26,39
+Maine,279,2020,27,39
+Maine,289,2020,28,39
+Maine,294,2020,29,39
+Maine,282,2020,30,39
+Maine,283,2020,31,39
+Maine,276,2020,32,39
+Maine,280,2020,33,39
+Maine,312,2020,34,39
+Maine,283,2020,35,39
+Maine,289,2020,36,39
+Maine,316,2020,37,39
+Maine,292,2020,38,39
+Maine,200,2020,39,39
+Maryland,1049,2020,1,39
+Maryland,1035,2020,2,39
+Maryland,988,2020,3,39
+Maryland,1003,2020,4,39
+Maryland,1034,2020,5,39
+Maryland,1004,2020,6,39
+Maryland,1019,2020,7,39
+Maryland,973,2020,8,39
+Maryland,1081,2020,9,39
+Maryland,1049,2020,10,39
+Maryland,1006,2020,11,39
+Maryland,1064,2020,12,39
+Maryland,1092,2020,13,39
+Maryland,1190,2020,14,39
+Maryland,1351,2020,15,39
+Maryland,1357,2020,16,39
+Maryland,1537,2020,17,39
+Maryland,1521,2020,18,39
+Maryland,1444,2020,19,39
+Maryland,1425,2020,20,39
+Maryland,1333,2020,21,39
+Maryland,1260,2020,22,39
+Maryland,1167,2020,23,39
+Maryland,1155,2020,24,39
+Maryland,1066,2020,25,39
+Maryland,1025,2020,26,39
+Maryland,1043,2020,27,39
+Maryland,1026,2020,28,39
+Maryland,1016,2020,29,39
+Maryland,991,2020,30,39
+Maryland,1057,2020,31,39
+Maryland,998,2020,32,39
+Maryland,1050,2020,33,39
+Maryland,987,2020,34,39
+Maryland,1012,2020,35,39
+Maryland,1001,2020,36,39
+Maryland,927,2020,37,39
+Maryland,789,2020,38,39
+Maryland,493,2020,39,39
+Massachusetts,1237,2020,1,39
+Massachusetts,1266,2020,2,39
+Massachusetts,1188,2020,3,39
+Massachusetts,1303,2020,4,39
+Massachusetts,1204,2020,5,39
+Massachusetts,1233,2020,6,39
+Massachusetts,1250,2020,7,39
+Massachusetts,1166,2020,8,39
+Massachusetts,1278,2020,9,39
+Massachusetts,1213,2020,10,39
+Massachusetts,1310,2020,11,39
+Massachusetts,1169,2020,12,39
+Massachusetts,1287,2020,13,39
+Massachusetts,1549,2020,14,39
+Massachusetts,2037,2020,15,39
+Massachusetts,2492,2020,16,39
+Massachusetts,2533,2020,17,39
+Massachusetts,2306,2020,18,39
+Massachusetts,2068,2020,19,39
+Massachusetts,1879,2020,20,39
+Massachusetts,1575,2020,21,39
+Massachusetts,1353,2020,22,39
+Massachusetts,1233,2020,23,39
+Massachusetts,1137,2020,24,39
+Massachusetts,1122,2020,25,39
+Massachusetts,1081,2020,26,39
+Massachusetts,1045,2020,27,39
+Massachusetts,1044,2020,28,39
+Massachusetts,1056,2020,29,39
+Massachusetts,1088,2020,30,39
+Massachusetts,1013,2020,31,39
+Massachusetts,983,2020,32,39
+Massachusetts,1044,2020,33,39
+Massachusetts,1024,2020,34,39
+Massachusetts,1041,2020,35,39
+Massachusetts,991,2020,36,39
+Massachusetts,955,2020,37,39
+Massachusetts,854,2020,38,39
+Massachusetts,396,2020,39,39
+Michigan,2013,2020,1,39
+Michigan,2064,2020,2,39
+Michigan,1937,2020,3,39
+Michigan,2009,2020,4,39
+Michigan,2003,2020,5,39
+Michigan,1937,2020,6,39
+Michigan,2011,2020,7,39
+Michigan,2054,2020,8,39
+Michigan,1969,2020,9,39
+Michigan,1985,2020,10,39
+Michigan,1949,2020,11,39
+Michigan,2033,2020,12,39
+Michigan,2428,2020,13,39
+Michigan,3107,2020,14,39
+Michigan,3377,2020,15,39
+Michigan,3151,2020,16,39
+Michigan,2798,2020,17,39
+Michigan,2585,2020,18,39
+Michigan,2233,2020,19,39
+Michigan,2156,2020,20,39
+Michigan,2009,2020,21,39
+Michigan,1954,2020,22,39
+Michigan,1996,2020,23,39
+Michigan,1854,2020,24,39
+Michigan,1877,2020,25,39
+Michigan,1906,2020,26,39
+Michigan,1973,2020,27,39
+Michigan,1882,2020,28,39
+Michigan,1862,2020,29,39
+Michigan,1882,2020,30,39
+Michigan,1944,2020,31,39
+Michigan,1850,2020,32,39
+Michigan,1995,2020,33,39
+Michigan,1886,2020,34,39
+Michigan,1886,2020,35,39
+Michigan,1904,2020,36,39
+Michigan,1822,2020,37,39
+Michigan,1556,2020,38,39
+Michigan,725,2020,39,39
+Minnesota,1009,2020,1,39
+Minnesota,950,2020,2,39
+Minnesota,945,2020,3,39
+Minnesota,957,2020,4,39
+Minnesota,942,2020,5,39
+Minnesota,919,2020,6,39
+Minnesota,941,2020,7,39
+Minnesota,912,2020,8,39
+Minnesota,932,2020,9,39
+Minnesota,944,2020,10,39
+Minnesota,882,2020,11,39
+Minnesota,893,2020,12,39
+Minnesota,906,2020,13,39
+Minnesota,922,2020,14,39
+Minnesota,937,2020,15,39
+Minnesota,946,2020,16,39
+Minnesota,1013,2020,17,39
+Minnesota,1041,2020,18,39
+Minnesota,1054,2020,19,39
+Minnesota,998,2020,20,39
+Minnesota,1001,2020,21,39
+Minnesota,1015,2020,22,39
+Minnesota,1038,2020,23,39
+Minnesota,973,2020,24,39
+Minnesota,936,2020,25,39
+Minnesota,835,2020,26,39
+Minnesota,873,2020,27,39
+Minnesota,861,2020,28,39
+Minnesota,858,2020,29,39
+Minnesota,872,2020,30,39
+Minnesota,804,2020,31,39
+Minnesota,879,2020,32,39
+Minnesota,866,2020,33,39
+Minnesota,866,2020,34,39
+Minnesota,844,2020,35,39
+Minnesota,805,2020,36,39
+Minnesota,792,2020,37,39
+Minnesota,788,2020,38,39
+Minnesota,437,2020,39,39
+Mississippi,673,2020,1,39
+Mississippi,648,2020,2,39
+Mississippi,624,2020,3,39
+Mississippi,610,2020,4,39
+Mississippi,604,2020,5,39
+Mississippi,702,2020,6,39
+Mississippi,647,2020,7,39
+Mississippi,623,2020,8,39
+Mississippi,662,2020,9,39
+Mississippi,660,2020,10,39
+Mississippi,620,2020,11,39
+Mississippi,624,2020,12,39
+Mississippi,693,2020,13,39
+Mississippi,706,2020,14,39
+Mississippi,694,2020,15,39
+Mississippi,732,2020,16,39
+Mississippi,748,2020,17,39
+Mississippi,745,2020,18,39
+Mississippi,746,2020,19,39
+Mississippi,774,2020,20,39
+Mississippi,719,2020,21,39
+Mississippi,745,2020,22,39
+Mississippi,725,2020,23,39
+Mississippi,701,2020,24,39
+Mississippi,739,2020,25,39
+Mississippi,712,2020,26,39
+Mississippi,707,2020,27,39
+Mississippi,779,2020,28,39
+Mississippi,770,2020,29,39
+Mississippi,862,2020,30,39
+Mississippi,849,2020,31,39
+Mississippi,897,2020,32,39
+Mississippi,835,2020,33,39
+Mississippi,772,2020,34,39
+Mississippi,742,2020,35,39
+Mississippi,659,2020,36,39
+Mississippi,623,2020,37,39
+Mississippi,503,2020,38,39
+Mississippi,202,2020,39,39
+Missouri,1327,2020,1,39
+Missouri,1333,2020,2,39
+Missouri,1332,2020,3,39
+Missouri,1348,2020,4,39
+Missouri,1360,2020,5,39
+Missouri,1328,2020,6,39
+Missouri,1345,2020,7,39
+Missouri,1357,2020,8,39
+Missouri,1364,2020,9,39
+Missouri,1390,2020,10,39
+Missouri,1297,2020,11,39
+Missouri,1265,2020,12,39
+Missouri,1336,2020,13,39
+Missouri,1295,2020,14,39
+Missouri,1460,2020,15,39
+Missouri,1347,2020,16,39
+Missouri,1440,2020,17,39
+Missouri,1386,2020,18,39
+Missouri,1417,2020,19,39
+Missouri,1341,2020,20,39
+Missouri,1288,2020,21,39
+Missouri,1229,2020,22,39
+Missouri,1272,2020,23,39
+Missouri,1242,2020,24,39
+Missouri,1215,2020,25,39
+Missouri,1257,2020,26,39
+Missouri,1257,2020,27,39
+Missouri,1255,2020,28,39
+Missouri,1329,2020,29,39
+Missouri,1300,2020,30,39
+Missouri,1299,2020,31,39
+Missouri,1279,2020,32,39
+Missouri,1291,2020,33,39
+Missouri,1273,2020,34,39
+Missouri,1191,2020,35,39
+Missouri,1148,2020,36,39
+Missouri,1044,2020,37,39
+Missouri,860,2020,38,39
+Missouri,245,2020,39,39
+Montana,231,2020,1,39
+Montana,211,2020,2,39
+Montana,202,2020,3,39
+Montana,196,2020,4,39
+Montana,218,2020,5,39
+Montana,202,2020,6,39
+Montana,198,2020,7,39
+Montana,218,2020,8,39
+Montana,235,2020,9,39
+Montana,221,2020,10,39
+Montana,218,2020,11,39
+Montana,228,2020,12,39
+Montana,205,2020,13,39
+Montana,177,2020,14,39
+Montana,216,2020,15,39
+Montana,191,2020,16,39
+Montana,187,2020,17,39
+Montana,204,2020,18,39
+Montana,177,2020,19,39
+Montana,205,2020,20,39
+Montana,180,2020,21,39
+Montana,179,2020,22,39
+Montana,178,2020,23,39
+Montana,223,2020,24,39
+Montana,198,2020,25,39
+Montana,198,2020,26,39
+Montana,174,2020,27,39
+Montana,189,2020,28,39
+Montana,203,2020,29,39
+Montana,223,2020,30,39
+Montana,215,2020,31,39
+Montana,215,2020,32,39
+Montana,204,2020,33,39
+Montana,234,2020,34,39
+Montana,184,2020,35,39
+Montana,219,2020,36,39
+Montana,170,2020,37,39
+Montana,108,2020,38,39
+Montana,14,2020,39,39
+Nebraska,345,2020,1,39
+Nebraska,362,2020,2,39
+Nebraska,333,2020,3,39
+Nebraska,358,2020,4,39
+Nebraska,373,2020,5,39
+Nebraska,345,2020,6,39
+Nebraska,327,2020,7,39
+Nebraska,318,2020,8,39
+Nebraska,341,2020,9,39
+Nebraska,355,2020,10,39
+Nebraska,343,2020,11,39
+Nebraska,350,2020,12,39
+Nebraska,331,2020,13,39
+Nebraska,310,2020,14,39
+Nebraska,343,2020,15,39
+Nebraska,353,2020,16,39
+Nebraska,353,2020,17,39
+Nebraska,344,2020,18,39
+Nebraska,338,2020,19,39
+Nebraska,352,2020,20,39
+Nebraska,347,2020,21,39
+Nebraska,375,2020,22,39
+Nebraska,318,2020,23,39
+Nebraska,317,2020,24,39
+Nebraska,371,2020,25,39
+Nebraska,317,2020,26,39
+Nebraska,304,2020,27,39
+Nebraska,315,2020,28,39
+Nebraska,324,2020,29,39
+Nebraska,357,2020,30,39
+Nebraska,356,2020,31,39
+Nebraska,374,2020,32,39
+Nebraska,344,2020,33,39
+Nebraska,355,2020,34,39
+Nebraska,310,2020,35,39
+Nebraska,319,2020,36,39
+Nebraska,295,2020,37,39
+Nebraska,203,2020,38,39
+Nebraska,43,2020,39,39
+Nevada,521,2020,1,39
+Nevada,556,2020,2,39
+Nevada,605,2020,3,39
+Nevada,577,2020,4,39
+Nevada,532,2020,5,39
+Nevada,579,2020,6,39
+Nevada,528,2020,7,39
+Nevada,545,2020,8,39
+Nevada,543,2020,9,39
+Nevada,535,2020,10,39
+Nevada,515,2020,11,39
+Nevada,508,2020,12,39
+Nevada,542,2020,13,39
+Nevada,592,2020,14,39
+Nevada,587,2020,15,39
+Nevada,545,2020,16,39
+Nevada,565,2020,17,39
+Nevada,547,2020,18,39
+Nevada,544,2020,19,39
+Nevada,514,2020,20,39
+Nevada,535,2020,21,39
+Nevada,543,2020,22,39
+Nevada,562,2020,23,39
+Nevada,543,2020,24,39
+Nevada,518,2020,25,39
+Nevada,555,2020,26,39
+Nevada,525,2020,27,39
+Nevada,626,2020,28,39
+Nevada,631,2020,29,39
+Nevada,641,2020,30,39
+Nevada,600,2020,31,39
+Nevada,664,2020,32,39
+Nevada,635,2020,33,39
+Nevada,614,2020,34,39
+Nevada,587,2020,35,39
+Nevada,578,2020,36,39
+Nevada,474,2020,37,39
+Nevada,360,2020,38,39
+Nevada,130,2020,39,39
+New Hampshire,261,2020,1,39
+New Hampshire,263,2020,2,39
+New Hampshire,245,2020,3,39
+New Hampshire,241,2020,4,39
+New Hampshire,240,2020,5,39
+New Hampshire,256,2020,6,39
+New Hampshire,236,2020,7,39
+New Hampshire,277,2020,8,39
+New Hampshire,228,2020,9,39
+New Hampshire,266,2020,10,39
+New Hampshire,240,2020,11,39
+New Hampshire,252,2020,12,39
+New Hampshire,258,2020,13,39
+New Hampshire,248,2020,14,39
+New Hampshire,270,2020,15,39
+New Hampshire,242,2020,16,39
+New Hampshire,274,2020,17,39
+New Hampshire,265,2020,18,39
+New Hampshire,292,2020,19,39
+New Hampshire,285,2020,20,39
+New Hampshire,268,2020,21,39
+New Hampshire,250,2020,22,39
+New Hampshire,259,2020,23,39
+New Hampshire,302,2020,24,39
+New Hampshire,238,2020,25,39
+New Hampshire,250,2020,26,39
+New Hampshire,247,2020,27,39
+New Hampshire,248,2020,28,39
+New Hampshire,230,2020,29,39
+New Hampshire,266,2020,30,39
+New Hampshire,247,2020,31,39
+New Hampshire,233,2020,32,39
+New Hampshire,229,2020,33,39
+New Hampshire,249,2020,34,39
+New Hampshire,229,2020,35,39
+New Hampshire,232,2020,36,39
+New Hampshire,227,2020,37,39
+New Hampshire,213,2020,38,39
+New Hampshire,156,2020,39,39
+New Jersey,1628,2020,1,39
+New Jersey,1587,2020,2,39
+New Jersey,1489,2020,3,39
+New Jersey,1580,2020,4,39
+New Jersey,1516,2020,5,39
+New Jersey,1493,2020,6,39
+New Jersey,1487,2020,7,39
+New Jersey,1493,2020,8,39
+New Jersey,1571,2020,9,39
+New Jersey,1507,2020,10,39
+New Jersey,1476,2020,11,39
+New Jersey,1595,2020,12,39
+New Jersey,2121,2020,13,39
+New Jersey,3477,2020,14,39
+New Jersey,4764,2020,15,39
+New Jersey,4723,2020,16,39
+New Jersey,3967,2020,17,39
+New Jersey,3177,2020,18,39
+New Jersey,2596,2020,19,39
+New Jersey,2279,2020,20,39
+New Jersey,1928,2020,21,39
+New Jersey,1743,2020,22,39
+New Jersey,1580,2020,23,39
+New Jersey,1481,2020,24,39
+New Jersey,1409,2020,25,39
+New Jersey,1439,2020,26,39
+New Jersey,1402,2020,27,39
+New Jersey,1379,2020,28,39
+New Jersey,1321,2020,29,39
+New Jersey,1362,2020,30,39
+New Jersey,1379,2020,31,39
+New Jersey,1335,2020,32,39
+New Jersey,1299,2020,33,39
+New Jersey,1334,2020,34,39
+New Jersey,1322,2020,35,39
+New Jersey,1373,2020,36,39
+New Jersey,1325,2020,37,39
+New Jersey,1084,2020,38,39
+New Jersey,685,2020,39,39
+New Mexico,402,2020,1,39
+New Mexico,408,2020,2,39
+New Mexico,387,2020,3,39
+New Mexico,397,2020,4,39
+New Mexico,368,2020,5,39
+New Mexico,369,2020,6,39
+New Mexico,381,2020,7,39
+New Mexico,386,2020,8,39
+New Mexico,394,2020,9,39
+New Mexico,394,2020,10,39
+New Mexico,340,2020,11,39
+New Mexico,385,2020,12,39
+New Mexico,360,2020,13,39
+New Mexico,392,2020,14,39
+New Mexico,402,2020,15,39
+New Mexico,414,2020,16,39
+New Mexico,401,2020,17,39
+New Mexico,416,2020,18,39
+New Mexico,430,2020,19,39
+New Mexico,461,2020,20,39
+New Mexico,390,2020,21,39
+New Mexico,423,2020,22,39
+New Mexico,441,2020,23,39
+New Mexico,429,2020,24,39
+New Mexico,403,2020,25,39
+New Mexico,389,2020,26,39
+New Mexico,434,2020,27,39
+New Mexico,393,2020,28,39
+New Mexico,384,2020,29,39
+New Mexico,408,2020,30,39
+New Mexico,385,2020,31,39
+New Mexico,396,2020,32,39
+New Mexico,365,2020,33,39
+New Mexico,365,2020,34,39
+New Mexico,357,2020,35,39
+New Mexico,311,2020,36,39
+New Mexico,285,2020,37,39
+New Mexico,209,2020,38,39
+New Mexico,84,2020,39,39
+New York,2164,2020,1,39
+New York,2092,2020,2,39
+New York,2168,2020,3,39
+New York,2023,2020,4,39
+New York,2029,2020,5,39
+New York,2058,2020,6,39
+New York,1989,2020,7,39
+New York,2032,2020,8,39
+New York,2161,2020,9,39
+New York,2071,2020,10,39
+New York,1981,2020,11,39
+New York,2127,2020,12,39
+New York,2543,2020,13,39
+New York,3771,2020,14,39
+New York,4662,2020,15,39
+New York,4460,2020,16,39
+New York,3738,2020,17,39
+New York,3128,2020,18,39
+New York,2779,2020,19,39
+New York,2505,2020,20,39
+New York,2242,2020,21,39
+New York,2111,2020,22,39
+New York,1970,2020,23,39
+New York,1896,2020,24,39
+New York,1897,2020,25,39
+New York,1927,2020,26,39
+New York,1887,2020,27,39
+New York,1887,2020,28,39
+New York,1842,2020,29,39
+New York,1804,2020,30,39
+New York,1874,2020,31,39
+New York,1866,2020,32,39
+New York,1818,2020,33,39
+New York,1866,2020,34,39
+New York,1791,2020,35,39
+New York,1777,2020,36,39
+New York,1757,2020,37,39
+New York,1809,2020,38,39
+New York,1350,2020,39,39
+New York City,1155,2020,1,39
+New York City,1137,2020,2,39
+New York City,1129,2020,3,39
+New York City,1182,2020,4,39
+New York City,1171,2020,5,39
+New York City,1172,2020,6,39
+New York City,1130,2020,7,39
+New York City,1096,2020,8,39
+New York City,1110,2020,9,39
+New York City,1113,2020,10,39
+New York City,1136,2020,11,39
+New York City,1405,2020,12,39
+New York City,2804,2020,13,39
+New York City,6296,2020,14,39
+New York City,7863,2020,15,39
+New York City,5902,2020,16,39
+New York City,4049,2020,17,39
+New York City,2847,2020,18,39
+New York City,2074,2020,19,39
+New York City,1604,2020,20,39
+New York City,1310,2020,21,39
+New York City,1166,2020,22,39
+New York City,1113,2020,23,39
+New York City,1098,2020,24,39
+New York City,990,2020,25,39
+New York City,1072,2020,26,39
+New York City,990,2020,27,39
+New York City,1026,2020,28,39
+New York City,969,2020,29,39
+New York City,1020,2020,30,39
+New York City,986,2020,31,39
+New York City,961,2020,32,39
+New York City,986,2020,33,39
+New York City,962,2020,34,39
+New York City,994,2020,35,39
+New York City,967,2020,36,39
+New York City,952,2020,37,39
+New York City,954,2020,38,39
+New York City,756,2020,39,39
+North Carolina,2004,2020,1,39
+North Carolina,1985,2020,2,39
+North Carolina,1901,2020,3,39
+North Carolina,1993,2020,4,39
+North Carolina,1984,2020,5,39
+North Carolina,2055,2020,6,39
+North Carolina,2061,2020,7,39
+North Carolina,1926,2020,8,39
+North Carolina,1970,2020,9,39
+North Carolina,2034,2020,10,39
+North Carolina,2024,2020,11,39
+North Carolina,2052,2020,12,39
+North Carolina,1876,2020,13,39
+North Carolina,2021,2020,14,39
+North Carolina,2015,2020,15,39
+North Carolina,2024,2020,16,39
+North Carolina,2105,2020,17,39
+North Carolina,1943,2020,18,39
+North Carolina,2053,2020,19,39
+North Carolina,2040,2020,20,39
+North Carolina,2056,2020,21,39
+North Carolina,1982,2020,22,39
+North Carolina,1958,2020,23,39
+North Carolina,1863,2020,24,39
+North Carolina,1908,2020,25,39
+North Carolina,1898,2020,26,39
+North Carolina,1927,2020,27,39
+North Carolina,1809,2020,28,39
+North Carolina,1647,2020,29,39
+North Carolina,1251,2020,30,39
+North Carolina,653,2020,31,39
+North Carolina,1527,2020,32,39
+North Carolina,1101,2020,33,39
+North Carolina,275,2020,34,39
+North Carolina,,2020,35,39
+North Dakota,149,2020,1,39
+North Dakota,151,2020,2,39
+North Dakota,171,2020,3,39
+North Dakota,147,2020,4,39
+North Dakota,130,2020,5,39
+North Dakota,137,2020,6,39
+North Dakota,148,2020,7,39
+North Dakota,176,2020,8,39
+North Dakota,153,2020,9,39
+North Dakota,171,2020,10,39
+North Dakota,148,2020,11,39
+North Dakota,150,2020,12,39
+North Dakota,119,2020,13,39
+North Dakota,140,2020,14,39
+North Dakota,158,2020,15,39
+North Dakota,157,2020,16,39
+North Dakota,158,2020,17,39
+North Dakota,148,2020,18,39
+North Dakota,141,2020,19,39
+North Dakota,152,2020,20,39
+North Dakota,140,2020,21,39
+North Dakota,143,2020,22,39
+North Dakota,160,2020,23,39
+North Dakota,143,2020,24,39
+North Dakota,141,2020,25,39
+North Dakota,131,2020,26,39
+North Dakota,115,2020,27,39
+North Dakota,135,2020,28,39
+North Dakota,134,2020,29,39
+North Dakota,130,2020,30,39
+North Dakota,130,2020,31,39
+North Dakota,140,2020,32,39
+North Dakota,111,2020,33,39
+North Dakota,87,2020,34,39
+North Dakota,91,2020,35,39
+North Dakota,96,2020,36,39
+North Dakota,82,2020,37,39
+North Dakota,77,2020,38,39
+North Dakota,41,2020,39,39
+Ohio,2541,2020,1,39
+Ohio,2609,2020,2,39
+Ohio,2474,2020,3,39
+Ohio,2564,2020,4,39
+Ohio,2492,2020,5,39
+Ohio,2532,2020,6,39
+Ohio,2490,2020,7,39
+Ohio,2525,2020,8,39
+Ohio,2457,2020,9,39
+Ohio,2505,2020,10,39
+Ohio,2550,2020,11,39
+Ohio,2515,2020,12,39
+Ohio,2505,2020,13,39
+Ohio,2560,2020,14,39
+Ohio,2622,2020,15,39
+Ohio,2644,2020,16,39
+Ohio,2828,2020,17,39
+Ohio,2726,2020,18,39
+Ohio,2612,2020,19,39
+Ohio,2675,2020,20,39
+Ohio,2653,2020,21,39
+Ohio,2509,2020,22,39
+Ohio,2580,2020,23,39
+Ohio,2411,2020,24,39
+Ohio,2386,2020,25,39
+Ohio,2406,2020,26,39
+Ohio,2479,2020,27,39
+Ohio,2478,2020,28,39
+Ohio,2510,2020,29,39
+Ohio,2478,2020,30,39
+Ohio,2574,2020,31,39
+Ohio,2519,2020,32,39
+Ohio,2494,2020,33,39
+Ohio,2476,2020,34,39
+Ohio,2384,2020,35,39
+Ohio,1961,2020,36,39
+Ohio,1625,2020,37,39
+Ohio,1021,2020,38,39
+Ohio,347,2020,39,39
+Oklahoma,891,2020,1,39
+Oklahoma,797,2020,2,39
+Oklahoma,778,2020,3,39
+Oklahoma,684,2020,4,39
+Oklahoma,724,2020,5,39
+Oklahoma,804,2020,6,39
+Oklahoma,786,2020,7,39
+Oklahoma,752,2020,8,39
+Oklahoma,793,2020,9,39
+Oklahoma,795,2020,10,39
+Oklahoma,791,2020,11,39
+Oklahoma,826,2020,12,39
+Oklahoma,852,2020,13,39
+Oklahoma,776,2020,14,39
+Oklahoma,848,2020,15,39
+Oklahoma,782,2020,16,39
+Oklahoma,734,2020,17,39
+Oklahoma,696,2020,18,39
+Oklahoma,776,2020,19,39
+Oklahoma,729,2020,20,39
+Oklahoma,809,2020,21,39
+Oklahoma,739,2020,22,39
+Oklahoma,786,2020,23,39
+Oklahoma,764,2020,24,39
+Oklahoma,736,2020,25,39
+Oklahoma,762,2020,26,39
+Oklahoma,776,2020,27,39
+Oklahoma,766,2020,28,39
+Oklahoma,781,2020,29,39
+Oklahoma,895,2020,30,39
+Oklahoma,865,2020,31,39
+Oklahoma,796,2020,32,39
+Oklahoma,829,2020,33,39
+Oklahoma,828,2020,34,39
+Oklahoma,733,2020,35,39
+Oklahoma,722,2020,36,39
+Oklahoma,577,2020,37,39
+Oklahoma,391,2020,38,39
+Oklahoma,101,2020,39,39
+Oregon,737,2020,1,39
+Oregon,764,2020,2,39
+Oregon,769,2020,3,39
+Oregon,745,2020,4,39
+Oregon,728,2020,5,39
+Oregon,727,2020,6,39
+Oregon,783,2020,7,39
+Oregon,732,2020,8,39
+Oregon,735,2020,9,39
+Oregon,788,2020,10,39
+Oregon,744,2020,11,39
+Oregon,774,2020,12,39
+Oregon,768,2020,13,39
+Oregon,778,2020,14,39
+Oregon,768,2020,15,39
+Oregon,765,2020,16,39
+Oregon,770,2020,17,39
+Oregon,713,2020,18,39
+Oregon,703,2020,19,39
+Oregon,716,2020,20,39
+Oregon,743,2020,21,39
+Oregon,748,2020,22,39
+Oregon,682,2020,23,39
+Oregon,726,2020,24,39
+Oregon,728,2020,25,39
+Oregon,681,2020,26,39
+Oregon,757,2020,27,39
+Oregon,710,2020,28,39
+Oregon,752,2020,29,39
+Oregon,734,2020,30,39
+Oregon,713,2020,31,39
+Oregon,748,2020,32,39
+Oregon,753,2020,33,39
+Oregon,747,2020,34,39
+Oregon,655,2020,35,39
+Oregon,559,2020,36,39
+Oregon,518,2020,37,39
+Oregon,369,2020,38,39
+Oregon,105,2020,39,39
+Pennsylvania,2774,2020,1,39
+Pennsylvania,2837,2020,2,39
+Pennsylvania,2851,2020,3,39
+Pennsylvania,2775,2020,4,39
+Pennsylvania,2783,2020,5,39
+Pennsylvania,2764,2020,6,39
+Pennsylvania,2790,2020,7,39
+Pennsylvania,2682,2020,8,39
+Pennsylvania,2755,2020,9,39
+Pennsylvania,2752,2020,10,39
+Pennsylvania,2800,2020,11,39
+Pennsylvania,2589,2020,12,39
+Pennsylvania,2727,2020,13,39
+Pennsylvania,3001,2020,14,39
+Pennsylvania,3447,2020,15,39
+Pennsylvania,3732,2020,16,39
+Pennsylvania,3805,2020,17,39
+Pennsylvania,3552,2020,18,39
+Pennsylvania,3423,2020,19,39
+Pennsylvania,3259,2020,20,39
+Pennsylvania,2937,2020,21,39
+Pennsylvania,2759,2020,22,39
+Pennsylvania,2682,2020,23,39
+Pennsylvania,2545,2020,24,39
+Pennsylvania,2597,2020,25,39
+Pennsylvania,2544,2020,26,39
+Pennsylvania,2579,2020,27,39
+Pennsylvania,2659,2020,28,39
+Pennsylvania,2537,2020,29,39
+Pennsylvania,2512,2020,30,39
+Pennsylvania,2615,2020,31,39
+Pennsylvania,2506,2020,32,39
+Pennsylvania,2630,2020,33,39
+Pennsylvania,2578,2020,34,39
+Pennsylvania,2489,2020,35,39
+Pennsylvania,2214,2020,36,39
+Pennsylvania,2063,2020,37,39
+Pennsylvania,2162,2020,38,39
+Pennsylvania,945,2020,39,39
+Puerto Rico,552,2020,1,39
+Puerto Rico,588,2020,2,39
+Puerto Rico,652,2020,3,39
+Puerto Rico,621,2020,4,39
+Puerto Rico,583,2020,5,39
+Puerto Rico,602,2020,6,39
+Puerto Rico,614,2020,7,39
+Puerto Rico,611,2020,8,39
+Puerto Rico,618,2020,9,39
+Puerto Rico,615,2020,10,39
+Puerto Rico,595,2020,11,39
+Puerto Rico,620,2020,12,39
+Puerto Rico,637,2020,13,39
+Puerto Rico,572,2020,14,39
+Puerto Rico,589,2020,15,39
+Puerto Rico,554,2020,16,39
+Puerto Rico,535,2020,17,39
+Puerto Rico,539,2020,18,39
+Puerto Rico,557,2020,19,39
+Puerto Rico,534,2020,20,39
+Puerto Rico,545,2020,21,39
+Puerto Rico,552,2020,22,39
+Puerto Rico,571,2020,23,39
+Puerto Rico,548,2020,24,39
+Puerto Rico,580,2020,25,39
+Puerto Rico,525,2020,26,39
+Puerto Rico,531,2020,27,39
+Puerto Rico,563,2020,28,39
+Puerto Rico,579,2020,29,39
+Puerto Rico,573,2020,30,39
+Puerto Rico,568,2020,31,39
+Puerto Rico,493,2020,32,39
+Puerto Rico,500,2020,33,39
+Puerto Rico,468,2020,34,39
+Puerto Rico,366,2020,35,39
+Puerto Rico,314,2020,36,39
+Puerto Rico,227,2020,37,39
+Puerto Rico,66,2020,38,39
+Puerto Rico,,2020,39,39
+Rhode Island,225,2020,1,39
+Rhode Island,201,2020,2,39
+Rhode Island,204,2020,3,39
+Rhode Island,199,2020,4,39
+Rhode Island,220,2020,5,39
+Rhode Island,244,2020,6,39
+Rhode Island,183,2020,7,39
+Rhode Island,206,2020,8,39
+Rhode Island,235,2020,9,39
+Rhode Island,254,2020,10,39
+Rhode Island,195,2020,11,39
+Rhode Island,219,2020,12,39
+Rhode Island,198,2020,13,39
+Rhode Island,236,2020,14,39
+Rhode Island,246,2020,15,39
+Rhode Island,273,2020,16,39
+Rhode Island,297,2020,17,39
+Rhode Island,331,2020,18,39
+Rhode Island,381,2020,19,39
+Rhode Island,301,2020,20,39
+Rhode Island,277,2020,21,39
+Rhode Island,252,2020,22,39
+Rhode Island,241,2020,23,39
+Rhode Island,207,2020,24,39
+Rhode Island,232,2020,25,39
+Rhode Island,201,2020,26,39
+Rhode Island,175,2020,27,39
+Rhode Island,187,2020,28,39
+Rhode Island,188,2020,29,39
+Rhode Island,171,2020,30,39
+Rhode Island,196,2020,31,39
+Rhode Island,205,2020,32,39
+Rhode Island,207,2020,33,39
+Rhode Island,189,2020,34,39
+Rhode Island,165,2020,35,39
+Rhode Island,158,2020,36,39
+Rhode Island,79,2020,37,39
+Rhode Island,13,2020,38,39
+South Carolina,1085,2020,1,39
+South Carolina,1080,2020,2,39
+South Carolina,1048,2020,3,39
+South Carolina,1033,2020,4,39
+South Carolina,1032,2020,5,39
+South Carolina,1096,2020,6,39
+South Carolina,1003,2020,7,39
+South Carolina,1035,2020,8,39
+South Carolina,1044,2020,9,39
+South Carolina,1132,2020,10,39
+South Carolina,1103,2020,11,39
+South Carolina,1067,2020,12,39
+South Carolina,1037,2020,13,39
+South Carolina,1048,2020,14,39
+South Carolina,1137,2020,15,39
+South Carolina,1049,2020,16,39
+South Carolina,1023,2020,17,39
+South Carolina,1032,2020,18,39
+South Carolina,1060,2020,19,39
+South Carolina,1109,2020,20,39
+South Carolina,1044,2020,21,39
+South Carolina,1047,2020,22,39
+South Carolina,1037,2020,23,39
+South Carolina,1078,2020,24,39
+South Carolina,1053,2020,25,39
+South Carolina,1094,2020,26,39
+South Carolina,1193,2020,27,39
+South Carolina,1211,2020,28,39
+South Carolina,1330,2020,29,39
+South Carolina,1339,2020,30,39
+South Carolina,1318,2020,31,39
+South Carolina,1363,2020,32,39
+South Carolina,1307,2020,33,39
+South Carolina,1158,2020,34,39
+South Carolina,1215,2020,35,39
+South Carolina,1189,2020,36,39
+South Carolina,1090,2020,37,39
+South Carolina,788,2020,38,39
+South Carolina,294,2020,39,39
+South Dakota,170,2020,1,39
+South Dakota,169,2020,2,39
+South Dakota,168,2020,3,39
+South Dakota,151,2020,4,39
+South Dakota,162,2020,5,39
+South Dakota,150,2020,6,39
+South Dakota,177,2020,7,39
+South Dakota,177,2020,8,39
+South Dakota,163,2020,9,39
+South Dakota,194,2020,10,39
+South Dakota,166,2020,11,39
+South Dakota,162,2020,12,39
+South Dakota,149,2020,13,39
+South Dakota,170,2020,14,39
+South Dakota,149,2020,15,39
+South Dakota,152,2020,16,39
+South Dakota,175,2020,17,39
+South Dakota,159,2020,18,39
+South Dakota,181,2020,19,39
+South Dakota,146,2020,20,39
+South Dakota,162,2020,21,39
+South Dakota,157,2020,22,39
+South Dakota,146,2020,23,39
+South Dakota,159,2020,24,39
+South Dakota,175,2020,25,39
+South Dakota,163,2020,26,39
+South Dakota,159,2020,27,39
+South Dakota,170,2020,28,39
+South Dakota,158,2020,29,39
+South Dakota,172,2020,30,39
+South Dakota,149,2020,31,39
+South Dakota,177,2020,32,39
+South Dakota,155,2020,33,39
+South Dakota,151,2020,34,39
+South Dakota,163,2020,35,39
+South Dakota,155,2020,36,39
+South Dakota,107,2020,37,39
+South Dakota,30,2020,38,39
+Tennessee,1613,2020,1,39
+Tennessee,1685,2020,2,39
+Tennessee,1595,2020,3,39
+Tennessee,1530,2020,4,39
+Tennessee,1586,2020,5,39
+Tennessee,1610,2020,6,39
+Tennessee,1452,2020,7,39
+Tennessee,1512,2020,8,39
+Tennessee,1499,2020,9,39
+Tennessee,1607,2020,10,39
+Tennessee,1595,2020,11,39
+Tennessee,1525,2020,12,39
+Tennessee,1521,2020,13,39
+Tennessee,1586,2020,14,39
+Tennessee,1512,2020,15,39
+Tennessee,1536,2020,16,39
+Tennessee,1475,2020,17,39
+Tennessee,1489,2020,18,39
+Tennessee,1484,2020,19,39
+Tennessee,1541,2020,20,39
+Tennessee,1555,2020,21,39
+Tennessee,1459,2020,22,39
+Tennessee,1480,2020,23,39
+Tennessee,1490,2020,24,39
+Tennessee,1560,2020,25,39
+Tennessee,1557,2020,26,39
+Tennessee,1524,2020,27,39
+Tennessee,1614,2020,28,39
+Tennessee,1628,2020,29,39
+Tennessee,1690,2020,30,39
+Tennessee,1688,2020,31,39
+Tennessee,1682,2020,32,39
+Tennessee,1637,2020,33,39
+Tennessee,1635,2020,34,39
+Tennessee,1627,2020,35,39
+Tennessee,1510,2020,36,39
+Tennessee,1488,2020,37,39
+Tennessee,1104,2020,38,39
+Tennessee,441,2020,39,39
+Texas,4324,2020,1,39
+Texas,4562,2020,2,39
+Texas,4250,2020,3,39
+Texas,4127,2020,4,39
+Texas,4172,2020,5,39
+Texas,4318,2020,6,39
+Texas,4341,2020,7,39
+Texas,4214,2020,8,39
+Texas,4144,2020,9,39
+Texas,4168,2020,10,39
+Texas,4166,2020,11,39
+Texas,4246,2020,12,39
+Texas,4255,2020,13,39
+Texas,4179,2020,14,39
+Texas,4260,2020,15,39
+Texas,4288,2020,16,39
+Texas,4456,2020,17,39
+Texas,4255,2020,18,39
+Texas,4271,2020,19,39
+Texas,4269,2020,20,39
+Texas,4245,2020,21,39
+Texas,4139,2020,22,39
+Texas,4224,2020,23,39
+Texas,4385,2020,24,39
+Texas,4486,2020,25,39
+Texas,4547,2020,26,39
+Texas,4993,2020,27,39
+Texas,5714,2020,28,39
+Texas,6180,2020,29,39
+Texas,6225,2020,30,39
+Texas,5826,2020,31,39
+Texas,5572,2020,32,39
+Texas,5580,2020,33,39
+Texas,4800,2020,34,39
+Texas,4793,2020,35,39
+Texas,4408,2020,36,39
+Texas,3753,2020,37,39
+Texas,2594,2020,38,39
+Texas,858,2020,39,39
+United States,60108,2020,1,39
+United States,60619,2020,2,39
+United States,59203,2020,3,39
+United States,58811,2020,4,39
+United States,58584,2020,5,39
+United States,59316,2020,6,39
+United States,58717,2020,7,39
+United States,58755,2020,8,39
+United States,59188,2020,9,39
+United States,59561,2020,10,39
+United States,58558,2020,11,39
+United States,59130,2020,12,39
+United States,62898,2020,13,39
+United States,72133,2020,14,39
+United States,78929,2020,15,39
+United States,76572,2020,16,39
+United States,73662,2020,17,39
+United States,69055,2020,18,39
+United States,66642,2020,19,39
+United States,64297,2020,20,39
+United States,61388,2020,21,39
+United States,59419,2020,22,39
+United States,58617,2020,23,39
+United States,57728,2020,24,39
+United States,57619,2020,25,39
+United States,58094,2020,26,39
+United States,59294,2020,27,39
+United States,61201,2020,28,39
+United States,62112,2020,29,39
+United States,62583,2020,30,39
+United States,61732,2020,31,39
+United States,61799,2020,32,39
+United States,60823,2020,33,39
+United States,58099,2020,34,39
+United States,55315,2020,35,39
+United States,52108,2020,36,39
+United States,48078,2020,37,39
+United States,38755,2020,38,39
+United States,16946,2020,39,39
+Utah,392,2020,1,39
+Utah,438,2020,2,39
+Utah,409,2020,3,39
+Utah,390,2020,4,39
+Utah,362,2020,5,39
+Utah,312,2020,6,39
+Utah,411,2020,7,39
+Utah,366,2020,8,39
+Utah,395,2020,9,39
+Utah,403,2020,10,39
+Utah,405,2020,11,39
+Utah,410,2020,12,39
+Utah,394,2020,13,39
+Utah,408,2020,14,39
+Utah,381,2020,15,39
+Utah,387,2020,16,39
+Utah,404,2020,17,39
+Utah,379,2020,18,39
+Utah,371,2020,19,39
+Utah,403,2020,20,39
+Utah,374,2020,21,39
+Utah,390,2020,22,39
+Utah,402,2020,23,39
+Utah,387,2020,24,39
+Utah,400,2020,25,39
+Utah,383,2020,26,39
+Utah,437,2020,27,39
+Utah,407,2020,28,39
+Utah,431,2020,29,39
+Utah,435,2020,30,39
+Utah,433,2020,31,39
+Utah,449,2020,32,39
+Utah,446,2020,33,39
+Utah,419,2020,34,39
+Utah,375,2020,35,39
+Utah,359,2020,36,39
+Utah,371,2020,37,39
+Utah,368,2020,38,39
+Utah,201,2020,39,39
+Vermont,92,2020,1,39
+Vermont,102,2020,2,39
+Vermont,125,2020,3,39
+Vermont,128,2020,4,39
+Vermont,96,2020,5,39
+Vermont,121,2020,6,39
+Vermont,126,2020,7,39
+Vermont,107,2020,8,39
+Vermont,137,2020,9,39
+Vermont,115,2020,10,39
+Vermont,140,2020,11,39
+Vermont,157,2020,12,39
+Vermont,106,2020,13,39
+Vermont,130,2020,14,39
+Vermont,127,2020,15,39
+Vermont,129,2020,16,39
+Vermont,120,2020,17,39
+Vermont,109,2020,18,39
+Vermont,112,2020,19,39
+Vermont,115,2020,20,39
+Vermont,103,2020,21,39
+Vermont,131,2020,22,39
+Vermont,127,2020,23,39
+Vermont,103,2020,24,39
+Vermont,90,2020,25,39
+Vermont,124,2020,26,39
+Vermont,91,2020,27,39
+Vermont,128,2020,28,39
+Vermont,86,2020,29,39
+Vermont,115,2020,30,39
+Vermont,103,2020,31,39
+Vermont,102,2020,32,39
+Vermont,104,2020,33,39
+Vermont,117,2020,34,39
+Vermont,119,2020,35,39
+Vermont,113,2020,36,39
+Vermont,110,2020,37,39
+Vermont,95,2020,38,39
+Vermont,73,2020,39,39
+Virginia,1428,2020,1,39
+Virginia,1534,2020,2,39
+Virginia,1420,2020,3,39
+Virginia,1280,2020,4,39
+Virginia,1423,2020,5,39
+Virginia,1524,2020,6,39
+Virginia,1376,2020,7,39
+Virginia,1444,2020,8,39
+Virginia,1387,2020,9,39
+Virginia,1479,2020,10,39
+Virginia,1435,2020,11,39
+Virginia,1453,2020,12,39
+Virginia,1517,2020,13,39
+Virginia,1467,2020,14,39
+Virginia,1619,2020,15,39
+Virginia,1599,2020,16,39
+Virginia,1629,2020,17,39
+Virginia,1668,2020,18,39
+Virginia,1590,2020,19,39
+Virginia,1565,2020,20,39
+Virginia,1462,2020,21,39
+Virginia,1443,2020,22,39
+Virginia,1408,2020,23,39
+Virginia,1422,2020,24,39
+Virginia,1290,2020,25,39
+Virginia,1453,2020,26,39
+Virginia,1389,2020,27,39
+Virginia,1481,2020,28,39
+Virginia,1382,2020,29,39
+Virginia,1453,2020,30,39
+Virginia,1448,2020,31,39
+Virginia,1492,2020,32,39
+Virginia,1430,2020,33,39
+Virginia,1427,2020,34,39
+Virginia,1408,2020,35,39
+Virginia,1388,2020,36,39
+Virginia,1306,2020,37,39
+Virginia,1048,2020,38,39
+Virginia,320,2020,39,39
+Washington,1184,2020,1,39
+Washington,1244,2020,2,39
+Washington,1221,2020,3,39
+Washington,1193,2020,4,39
+Washington,1198,2020,5,39
+Washington,1178,2020,6,39
+Washington,1179,2020,7,39
+Washington,1115,2020,8,39
+Washington,1134,2020,9,39
+Washington,1208,2020,10,39
+Washington,1165,2020,11,39
+Washington,1223,2020,12,39
+Washington,1293,2020,13,39
+Washington,1305,2020,14,39
+Washington,1304,2020,15,39
+Washington,1249,2020,16,39
+Washington,1230,2020,17,39
+Washington,1155,2020,18,39
+Washington,1210,2020,19,39
+Washington,1138,2020,20,39
+Washington,1114,2020,21,39
+Washington,1055,2020,22,39
+Washington,1053,2020,23,39
+Washington,1098,2020,24,39
+Washington,1126,2020,25,39
+Washington,1082,2020,26,39
+Washington,1120,2020,27,39
+Washington,1155,2020,28,39
+Washington,1174,2020,29,39
+Washington,1173,2020,30,39
+Washington,1225,2020,31,39
+Washington,1223,2020,32,39
+Washington,1162,2020,33,39
+Washington,1189,2020,34,39
+Washington,1098,2020,35,39
+Washington,1205,2020,36,39
+Washington,1096,2020,37,39
+Washington,951,2020,38,39
+Washington,421,2020,39,39
+West Virginia,470,2020,1,39
+West Virginia,491,2020,2,39
+West Virginia,518,2020,3,39
+West Virginia,439,2020,4,39
+West Virginia,479,2020,5,39
+West Virginia,479,2020,6,39
+West Virginia,472,2020,7,39
+West Virginia,466,2020,8,39
+West Virginia,456,2020,9,39
+West Virginia,482,2020,10,39
+West Virginia,471,2020,11,39
+West Virginia,468,2020,12,39
+West Virginia,487,2020,13,39
+West Virginia,451,2020,14,39
+West Virginia,492,2020,15,39
+West Virginia,368,2020,16,39
+West Virginia,426,2020,17,39
+West Virginia,451,2020,18,39
+West Virginia,440,2020,19,39
+West Virginia,468,2020,20,39
+West Virginia,431,2020,21,39
+West Virginia,404,2020,22,39
+West Virginia,390,2020,23,39
+West Virginia,437,2020,24,39
+West Virginia,409,2020,25,39
+West Virginia,449,2020,26,39
+West Virginia,412,2020,27,39
+West Virginia,417,2020,28,39
+West Virginia,412,2020,29,39
+West Virginia,469,2020,30,39
+West Virginia,421,2020,31,39
+West Virginia,420,2020,32,39
+West Virginia,332,2020,33,39
+West Virginia,221,2020,34,39
+West Virginia,97,2020,35,39
+West Virginia,34,2020,36,39
+West Virginia,10,2020,37,39
+West Virginia,,2020,38,39
+Wisconsin,1118,2020,1,39
+Wisconsin,1060,2020,2,39
+Wisconsin,1133,2020,3,39
+Wisconsin,1086,2020,4,39
+Wisconsin,1176,2020,5,39
+Wisconsin,1054,2020,6,39
+Wisconsin,1125,2020,7,39
+Wisconsin,1161,2020,8,39
+Wisconsin,1136,2020,9,39
+Wisconsin,1116,2020,10,39
+Wisconsin,1105,2020,11,39
+Wisconsin,1114,2020,12,39
+Wisconsin,1146,2020,13,39
+Wisconsin,1221,2020,14,39
+Wisconsin,1170,2020,15,39
+Wisconsin,1150,2020,16,39
+Wisconsin,1026,2020,17,39
+Wisconsin,1162,2020,18,39
+Wisconsin,1080,2020,19,39
+Wisconsin,1022,2020,20,39
+Wisconsin,1075,2020,21,39
+Wisconsin,1138,2020,22,39
+Wisconsin,1043,2020,23,39
+Wisconsin,1025,2020,24,39
+Wisconsin,1084,2020,25,39
+Wisconsin,1032,2020,26,39
+Wisconsin,1066,2020,27,39
+Wisconsin,1047,2020,28,39
+Wisconsin,1036,2020,29,39
+Wisconsin,1099,2020,30,39
+Wisconsin,1054,2020,31,39
+Wisconsin,1094,2020,32,39
+Wisconsin,1120,2020,33,39
+Wisconsin,1052,2020,34,39
+Wisconsin,1066,2020,35,39
+Wisconsin,999,2020,36,39
+Wisconsin,993,2020,37,39
+Wisconsin,884,2020,38,39
+Wisconsin,309,2020,39,39
+Wyoming,144,2020,1,39
+Wyoming,81,2020,2,39
+Wyoming,103,2020,3,39
+Wyoming,96,2020,4,39
+Wyoming,94,2020,5,39
+Wyoming,97,2020,6,39
+Wyoming,75,2020,7,39
+Wyoming,101,2020,8,39
+Wyoming,100,2020,9,39
+Wyoming,80,2020,10,39
+Wyoming,85,2020,11,39
+Wyoming,117,2020,12,39
+Wyoming,88,2020,13,39
+Wyoming,123,2020,14,39
+Wyoming,102,2020,15,39
+Wyoming,89,2020,16,39
+Wyoming,98,2020,17,39
+Wyoming,68,2020,18,39
+Wyoming,83,2020,19,39
+Wyoming,101,2020,20,39
+Wyoming,96,2020,21,39
+Wyoming,84,2020,22,39
+Wyoming,105,2020,23,39
+Wyoming,96,2020,24,39
+Wyoming,93,2020,25,39
+Wyoming,89,2020,26,39
+Wyoming,102,2020,27,39
+Wyoming,104,2020,28,39
+Wyoming,101,2020,29,39
+Wyoming,94,2020,30,39
+Wyoming,90,2020,31,39
+Wyoming,106,2020,32,39
+Wyoming,111,2020,33,39
+Wyoming,95,2020,34,39
+Wyoming,85,2020,35,39
+Wyoming,103,2020,36,39
+Wyoming,106,2020,37,39
+Wyoming,60,2020,38,39
+Wyoming,20,2020,39,39

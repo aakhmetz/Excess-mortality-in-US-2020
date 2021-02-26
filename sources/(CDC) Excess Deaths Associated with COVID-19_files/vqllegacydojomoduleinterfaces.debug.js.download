@@ -1,0 +1,135 @@
+/*! BEGIN LegacyDojoModuleInterfaces */
+
+(function() {
+  'dont use strict';
+  var $asm = {};
+  global.tab = global.tab || {};
+  ss.initAssembly($asm, 'vqllegacydojomoduleinterfaces');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoModuleInterfaces.ICategoricalLegendView<TViewModel>
+  var $tab_ICategoricalLegendView$1 = global.tab.ICategoricalLegendView$1 = ss.mkType($asm, 'tab.ICategoricalLegendView$1', function(TViewModel) {
+    var $type = ss.registerGenericInterfaceInstance($tab_ICategoricalLegendView$1, [TViewModel], {}, function() {
+      return [ss.makeGenericType(tab.IView$1, [TViewModel]), ss.IDisposable, tab.IAppendableView];
+    });
+    ss.setMetadata($type, { variance: [1] });
+    return $type;
+  });
+  ss.initGenericInterface($tab_ICategoricalLegendView$1, 1);
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoModuleInterfaces.ICategoricalLegendViewModel
+  var $tab_ICategoricalLegendViewModel = global.tab.ICategoricalLegendViewModel = ss.mkType($asm, 'tab.ICategoricalLegendViewModel');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoModuleInterfaces.IContinuousSlider
+  var $tab_IContinuousSlider = global.tab.IContinuousSlider = ss.mkType($asm, 'tab.IContinuousSlider');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoModuleInterfaces.IContinuousSliderViewModel
+  var $tab_IContinuousSliderViewModel = global.tab.IContinuousSliderViewModel = ss.mkType($asm, 'tab.IContinuousSliderViewModel');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoModuleInterfaces.ICurrentPagePanelWidgetShim
+  var $tab_ICurrentPagePanelWidgetShim = global.tab.ICurrentPagePanelWidgetShim = ss.mkType($asm, 'tab.ICurrentPagePanelWidgetShim');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoModuleInterfaces.IFilterPanelWidgetShim
+  var $tab_IFilterPanelWidgetShim = global.tab.IFilterPanelWidgetShim = ss.mkType($asm, 'tab.IFilterPanelWidgetShim');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoModuleInterfaces.ILegacyDojoUIModule
+  var $tab_ILegacyDojoUIModule = global.tab.ILegacyDojoUIModule = ss.mkType($asm, 'tab.ILegacyDojoUIModule');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoModuleInterfaces.ILegacyDojoWidgetMaker
+  var $tab_ILegacyDojoWidgetMaker = global.tab.ILegacyDojoWidgetMaker = ss.mkType($asm, 'tab.ILegacyDojoWidgetMaker');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoModuleInterfaces.ILegacyLegendView<TViewModel>
+  var $tab_ILegacyLegendView$1 = global.tab.ILegacyLegendView$1 = ss.mkType($asm, 'tab.ILegacyLegendView$1', function(TViewModel) {
+    var $type = ss.registerGenericInterfaceInstance($tab_ILegacyLegendView$1, [TViewModel], {}, function() {
+      return [ss.makeGenericType(tab.IView$1, [TViewModel]), ss.IDisposable, tab.IAppendableView];
+    });
+    ss.setMetadata($type, { variance: [1] });
+    return $type;
+  });
+  ss.initGenericInterface($tab_ILegacyLegendView$1, 1);
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoModuleInterfaces.ILegacyLegendViewModel
+  var $tab_ILegacyLegendViewModel = global.tab.ILegacyLegendViewModel = ss.mkType($asm, 'tab.ILegacyLegendViewModel');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoModuleInterfaces.ILegacyQuickFilterDisplayView<TViewModel>
+  var $tab_ILegacyQuickFilterDisplayView$1 = global.tab.ILegacyQuickFilterDisplayView$1 = ss.mkType($asm, 'tab.ILegacyQuickFilterDisplayView$1', function(TViewModel) {
+    var $type = ss.registerGenericInterfaceInstance($tab_ILegacyQuickFilterDisplayView$1, [TViewModel], {}, function() {
+      return [ss.makeGenericType(tab.IView$1, [TViewModel]), ss.IDisposable, tab.IAppendableView];
+    });
+    ss.setMetadata($type, { variance: [1] });
+    return $type;
+  });
+  ss.initGenericInterface($tab_ILegacyQuickFilterDisplayView$1, 1);
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoModuleInterfaces.ILegacyQuickFilterDisplayViewModel
+  var $tab_ILegacyQuickFilterDisplayViewModel = global.tab.ILegacyQuickFilterDisplayViewModel = ss.mkType($asm, 'tab.ILegacyQuickFilterDisplayViewModel');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoModuleInterfaces.ILegacyWidgetShim
+  var $tab_ILegacyWidgetShim = global.tab.ILegacyWidgetShim = ss.mkType($asm, 'tab.ILegacyWidgetShim');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoModuleInterfaces.IPageView<TViewModel>
+  var $tab_IPageView$1 = global.tab.IPageView$1 = ss.mkType($asm, 'tab.IPageView$1', function(TViewModel) {
+    var $type = ss.registerGenericInterfaceInstance($tab_IPageView$1, [TViewModel], {}, function() {
+      return [ss.makeGenericType(tab.IView$1, [TViewModel]), ss.IDisposable, tab.IAppendableView];
+    });
+    ss.setMetadata($type, { variance: [1] });
+    return $type;
+  });
+  ss.initGenericInterface($tab_IPageView$1, 1);
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoModuleInterfaces.IPageViewModel
+  var $tab_IPageViewModel = global.tab.IPageViewModel = ss.mkType($asm, 'tab.IPageViewModel');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoModuleInterfaces.IParameterControlView<TViewModel>
+  var $tab_IParameterControlView$1 = global.tab.IParameterControlView$1 = ss.mkType($asm, 'tab.IParameterControlView$1', function(TViewModel) {
+    var $type = ss.registerGenericInterfaceInstance($tab_IParameterControlView$1, [TViewModel], { updateViewProperties: null }, function() {
+      return [ss.makeGenericType(tab.IView$1, [TViewModel]), ss.IDisposable, tab.IAppendableView];
+    });
+    ss.setMetadata($type, { variance: [1] });
+    return $type;
+  });
+  ss.initGenericInterface($tab_IParameterControlView$1, 1);
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoModuleInterfaces.IParameterControlViewModel
+  var $tab_IParameterControlViewModel = global.tab.IParameterControlViewModel = ss.mkType($asm, 'tab.IParameterControlViewModel');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoModuleInterfaces.IParameterControlWidgetShim
+  var $tab_IParameterControlWidgetShim = global.tab.IParameterControlWidgetShim = ss.mkType($asm, 'tab.IParameterControlWidgetShim');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoModuleInterfaces.IQuantitativeColorLegendView<TViewModel>
+  var $tab_IQuantitativeColorLegendView$1 = global.tab.IQuantitativeColorLegendView$1 = ss.mkType($asm, 'tab.IQuantitativeColorLegendView$1', function(TViewModel) {
+    var $type = ss.registerGenericInterfaceInstance($tab_IQuantitativeColorLegendView$1, [TViewModel], {}, function() {
+      return [ss.makeGenericType(tab.IView$1, [TViewModel]), ss.IDisposable, tab.IAppendableView];
+    });
+    ss.setMetadata($type, { variance: [1] });
+    return $type;
+  });
+  ss.initGenericInterface($tab_IQuantitativeColorLegendView$1, 1);
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoModuleInterfaces.IQuantitativeColorLegendViewModel
+  var $tab_IQuantitativeColorLegendViewModel = global.tab.IQuantitativeColorLegendViewModel = ss.mkType($asm, 'tab.IQuantitativeColorLegendViewModel');
+  ////////////////////////////////////////////////////////////////////////////////
+  // Tableau.JavaScript.Vql.LegacyDojoModuleInterfaces.ITabbedNavigation
+  var $tab_ITabbedNavigation = global.tab.ITabbedNavigation = ss.mkType($asm, 'tab.ITabbedNavigation');
+  ss.initInterface($tab_ICategoricalLegendViewModel, {}, [tab.IViewModel, ss.IDisposable]);
+  ss.initInterface($tab_IContinuousSlider, { get_widgetNode: null, onAddedToDomShim: null });
+  ss.initInterface($tab_IContinuousSliderViewModel, { add_sliderValueChange: null, remove_sliderValueChange: null, add_intermediateChange: null, remove_intermediateChange: null, get_sliderClassName: null, set_sliderClassName: null, get_currentFraction: null, set_currentFraction: null, get_pixelWidth: null, set_pixelWidth: null, get_ruleTickCount: null, set_ruleTickCount: null, currentFractionUpdated: null }, [tab.IViewModel, ss.IDisposable, spiff.IHasEnabledState]);
+  ss.initInterface($tab_ILegacyWidgetShim, { getDomNode: null, destroyRecursiveShim: null, startupShim: null });
+  ss.initInterface($tab_ICurrentPagePanelWidgetShim, { destroyRecursiveShim$1: null, updatePropertiesShim: null, refreshLayoutShim: null }, [$tab_ILegacyWidgetShim]);
+  ss.initInterface($tab_IFilterPanelWidgetShim, { updateAttributesShim: null, updateFilterStateShim: null, setTitleSizeShim: null, updateFilterPropertiesShim: null, updateSubWidgetShim: null }, [$tab_ILegacyWidgetShim, ss.IDisposable]);
+  ss.initInterface($tab_ILegacyDojoUIModule, { createTabbedNavigation: null, createPageViewModel: null, createCategoricalLegendViewModel: null, createQuantitativeColorLegendViewModel: null, createLegacyLegendViewModel: null, createLegacyQuickFilterDisplayViewModel: null, createParameterControlViewModel: null, createPageView: null, createLegacyQuickFilterDisplayView: null, createParameterControlView: null, createQuantitativeColorLegendView: null, createContinuousSliderViewModel: null, createLegacyLegendView: null, createContinuousSlider: null });
+  ss.initInterface($tab_ILegacyDojoWidgetMaker, { makeCurrentPagePanelWidget: null, makeFilterPanelWidget: null, makeControlWidget: null });
+  ss.initInterface($tab_ILegacyLegendViewModel, {}, [tab.IViewModel, ss.IDisposable]);
+  ss.initInterface($tab_ILegacyQuickFilterDisplayViewModel, {}, [tab.IViewModel, ss.IDisposable]);
+  ss.initInterface($tab_IPageViewModel, { get_visualId: null, get_isHistoryToggleInteractionDisabled: null, get_pageModel: null }, [tab.IViewModel, ss.IDisposable]);
+  ss.initInterface($tab_IParameterControlViewModel, { get_parameterCtrlModel: null, get_hasBorder: null, get_hasContextMenu: null, showContextMenu: null }, [tab.IViewModel, ss.IDisposable]);
+  ss.initInterface($tab_IParameterControlWidgetShim, { destroyRecursiveShim$1: null, updatePropertiesShim: null, layoutShim: null }, [$tab_ILegacyWidgetShim]);
+  ss.initInterface($tab_IQuantitativeColorLegendViewModel, {}, [tab.IViewModel, ss.IDisposable]);
+  ss.initInterface($tab_ITabbedNavigation, { get_widgetDomNode: null, destroyShim: null, startupShim: null, resizeShim: null });
+  ss.setMetadata($tab_ICategoricalLegendView$1, { variance: [1] });
+  ss.setMetadata($tab_ILegacyLegendView$1, { variance: [1] });
+  ss.setMetadata($tab_ILegacyQuickFilterDisplayView$1, { variance: [1] });
+  ss.setMetadata($tab_IPageView$1, { variance: [1] });
+  ss.setMetadata($tab_IParameterControlView$1, { variance: [1] });
+  ss.setMetadata($tab_IQuantitativeColorLegendView$1, { variance: [1] });
+})();
+// END LegacyDojoModuleInterfaces
