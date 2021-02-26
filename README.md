@@ -3,4 +3,4 @@
 *Work in progress*
 
 **Main notebooks**
-1. Pre-processing of the data:</br>[A. ](https://nbviewer.jupyter.org/github/aakhmetz/WuhanIncubationPeriod2020/blob/master/scripts/A.%20MCMC%20simulations%20in%20Stan.ipynb)
+1. Pre-processing of the data:</br>[A. Pre-processing data.ipynb](https://nbviewer.jupyter.org/github/aakhmetz/Excess-mortality-in-US-2020/blob/main/scripts/Andrei/A.%20Pre-processing%20data.ipynb)
