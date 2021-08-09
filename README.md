@@ -4,10 +4,13 @@ Supporting materials for Akhmetzhanov AR. Estimation of delay-adjusted all-cause
 
 Please see the authors' version: [ms.pdf](https://github.com/aakhmetz/Excess-mortality-in-US-2020/blob/main/manuscript/2021%20Akhmetzhanov%20Epidem%20Infect%20-%20Excess%20mortality%20in%20US%2C%202020.pdf)
 
-One of the initial motivation for the study was to investigate how different the reporting delays of excess mortality  
-
+One of the initial motivation for the study was to investigate how different the reporting delays of excess mortality. It appeared that several US jurisdictions such as Connecticut had longer delays but most likely they were caused by administrative procedures:
 <p align="center">
   <img src="figures/Figure1A-small.png" title="Reporting delay">
+</p>
+However, the mean delay was increased by approx. one week in hard hit jurisdictions, e.g. North Dakota and South Dakota during the second wave of pandemic in USA:
+<p align="center">
+  <img src="figures/Figure1C-small.png" title="Reporting delay - 2">
 </p>
 
 **Main notebooks**
