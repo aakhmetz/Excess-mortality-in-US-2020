@@ -2,7 +2,13 @@
 
 Supporting materials for Akhmetzhanov AR. Estimation of delay-adjusted all-cause excess mortality in the USA: March–December 2020" Epidemiology & Infection 2021;**149**(e156);1-8 (doi:[10.1017/S0950268821001527](https://doi.org/10.1017/S0950268821001527)).
 
-Please see the authors' version: [ms.pdf]()
+Please see the authors' version: [ms.pdf](https://github.com/aakhmetz/Excess-mortality-in-US-2020/blob/main/manuscript/2021%20Akhmetzhanov%20Epidem%20Infect%20-%20Excess%20mortality%20in%20US%2C%202020.pdf)
+
+One of the initial motivation for the study was to investigate how different the reporting delays of excess mortality  
+
+<p align="center">
+  <img src="figures/Figure1.png" title="Reporting delay">
+</p>
 
 **Main notebooks**
 
