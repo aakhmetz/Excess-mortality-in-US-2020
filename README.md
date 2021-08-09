@@ -25,3 +25,10 @@ However, the mean delay was increased by approx. one week in hard hit jurisdicti
 [C. Historical data](https://nbviewer.jupyter.org/github/aakhmetz/Excess-mortality-in-US-2020/blob/main/scripts/Andrei/C.%20Historical%20data.ipynb)
 
 [D. Generating figures](https://nbviewer.jupyter.org/github/aakhmetz/Excess-mortality-in-US-2020/blob/main/scripts/Andrei/D.%20Generating%20figures.ipynb)
+
+---------
+**Thank you for your interest to our work!** 
+
+The notebooks were written in R with Stan used for Bayesian simulations. 
+
+**Words of caution**: We note that the code is not supposed to work out of box. Our main intent was to show the relevance of the methods used in our paper. We are grateful for your understanding in advance.
