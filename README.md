@@ -1,6 +1,6 @@
-# Excess-mortality-in-US-2020
+# Estimation of delay-adjusted all-cause excess mortality in the USA: March–December 2020
 
-Supporting materials for Akhmetzhanov AR Estimation of delay-adjusted all-cause excess mortality in the USA: March–December 2020" Epidemiology & Infection 2021;**149**(e156);1-8 (doi:[10.1017/S0950268821001527](https://doi.org/10.1017/S0950268821001527)).
+Supporting materials for Akhmetzhanov AR. Estimation of delay-adjusted all-cause excess mortality in the USA: March–December 2020" Epidemiology & Infection 2021;**149**(e156);1-8 (doi:[10.1017/S0950268821001527](https://doi.org/10.1017/S0950268821001527)).
 
 Please see the authors' version: [ms.pdf]()
 
