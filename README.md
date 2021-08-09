@@ -7,7 +7,7 @@ Please see the authors' version: [ms.pdf](https://github.com/aakhmetz/Excess-mor
 One of the initial motivation for the study was to investigate how different the reporting delays of excess mortality  
 
 <p align="center">
-  <img src="figures/Figure1A.png" title="Reporting delay">
+  <img src="figures/Figure1A-small.png" title="Reporting delay">
 </p>
 
 **Main notebooks**
